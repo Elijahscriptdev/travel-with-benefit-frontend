@@ -13,7 +13,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-          GET STARTED
+          BOOK NOW
         </Button>
         <Button
           className='btns'
@@ -21,7 +21,7 @@ function HeroSection() {
           buttonSize='btn--large'
           onClick={console.log("hey")}
         >
-          WATCH TRAILER <i className='far fa-play-circle' />
+          CONTACT US <i className='far fa-play-circle' />
         </Button>
       </div>
     </div>
