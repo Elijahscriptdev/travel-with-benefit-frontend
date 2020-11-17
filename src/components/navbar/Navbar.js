@@ -1,14 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../button/Button";
+import './Navbar.css'
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => {
     setClick(!click);
   };
 
   const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -36,26 +49,26 @@ function Navbar() {
                 Our Partners
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Testimonial
               </Link>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Book a Ticket
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 FAQ Page
               </Link>
-            </li>
-            <li className='nav-item'>
+            </li> */}
+            {/* <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Account <i class='fas fa-user'></i>
               </Link>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <Link
                 to='/sign-up'
@@ -66,6 +79,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
       </nav>
     </>
