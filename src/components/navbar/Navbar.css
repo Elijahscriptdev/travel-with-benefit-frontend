@@ -30,6 +30,11 @@
   align-items: center;
 }
 
+.navbar-logo:hover {
+  color: #fff!important;
+  text-decoration: none;
+}
+
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;
@@ -46,21 +51,21 @@
   margin-right: 2rem;
 }
 
-.nav-item {
+.nav-items {
   height: 80px;
 }
 
 .nav-links {
-  color: #fff;
+  color: #fff!important;
   display: flex;
   align-items: center;
-  text-decoration: none;
+  text-decoration: none!important;
   padding: 5.2rem 1rem 1.2rem;
   height: 100%;
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #fff!important;
   transition: all 0.2s ease-out;
 }
 
@@ -107,11 +112,12 @@
     padding: 2rem;
     width: 100%;
     display: table;
+    text-decoration: none!important;
   }
 
   .nav-links:hover {
     background-color: #fff;
-    color: #242424;
+    color: #DE4A09!important;
     border-radius: 0;
   }
 

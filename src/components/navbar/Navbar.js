@@ -38,42 +38,42 @@ function Navbar() {
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className='nav-item'>
+            <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 About
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Our Partners
               </Link>
             </li>
-            {/* <li className='nav-item'>
+            {/* <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Testimonial
               </Link>
             </li> */}
-            <li className='nav-item'>
+            <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Book a Ticket
               </Link>
             </li>
-            {/* <li className='nav-item'>
+            {/* <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 FAQ Page
               </Link>
             </li> */}
-            {/* <li className='nav-item'>
+            {/* <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Account <i class='fas fa-user'></i>
               </Link>
             </li> */}
-            <li className='nav-item'>
+            <li className='nav-items'>
               <Link
                 to='/sign-up'
                 className='nav-links-mobile'
