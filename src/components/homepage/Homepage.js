@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "../button/Button";
 import HeroSection from "../hero-section/HeroSection";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Homepage.css";
@@ -25,7 +24,6 @@ function Homepage() {
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605619290/priscilla-du-preez-EFoH8YajQuA-unsplash_bsi3t8.jpg'
               alt='img'
-              srcset=''
               className='img-fluid'
             />
           </Col>
@@ -43,7 +41,7 @@ function Homepage() {
         <Row>
           <Col xs={12} md={3}>
             <div className='choose-us-content text-center'>
-              <i class='fas icon fa-map-marker-alt'></i>
+              <i className='fas icon fa-map-marker-alt'></i>
               <h5>Diverse Destinations</h5>
               <p>
                 orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -53,7 +51,7 @@ function Homepage() {
           </Col>
           <Col xs={12} md={3}>
             <div className='choose-us-content text-center'>
-              <i class='fas icon fa-money-check'></i>
+              <i className='fas icon fa-money-check'></i>
               <h5>Value for Money</h5>
               <p>
                 orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -63,7 +61,7 @@ function Homepage() {
           </Col>
           <Col xs={12} md={3}>
             <div className='choose-us-content text-center'>
-              <i class='fas icon fa-globe-africa'></i>
+              <i className='fas icon fa-globe-africa'></i>
               <h5>Beautiful Places</h5>
               <p>
                 orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -73,7 +71,7 @@ function Homepage() {
           </Col>
           <Col xs={12} md={3}>
             <div className='choose-us-content text-center'>
-              <i class='fas icon fa-location-arrow'></i>
+              <i className='fas icon fa-location-arrow'></i>
               <h5>Passionate Travel</h5>
               <p>
                 orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
