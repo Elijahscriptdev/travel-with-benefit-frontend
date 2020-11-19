@@ -1,6 +1,6 @@
-import React from 'react';
-import './Footer.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -63,8 +63,8 @@ function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
-            TRAVEL
-            <i className='fas fa-bus-alt'></i>
+              TRAVEL
+              <i className='fas fa-bus-alt'></i>
             </Link>
           </div>
           <small className='website-rights'>TRAVEL © 2020</small>
