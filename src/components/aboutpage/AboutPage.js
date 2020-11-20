@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Jumbotron, Row } from "react-bootstrap";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./AboutPage.css";
 
@@ -114,7 +114,7 @@ function AboutPage() {
         </Row>
       </Container>
 
-      <Container fluid className='choose-us text-center'>
+      {/* <Container fluid className='choose-us text-center'>
         <div className=' text-center mb-5'>
           <h1>Our Team</h1>
           <p>
@@ -184,7 +184,7 @@ function AboutPage() {
             </Card>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </>
   );
 }
