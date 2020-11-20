@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../hero-section/HeroSection";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Homepage.css";
+import Slider from "../slider/Slider";
 
 function Homepage() {
   return (
@@ -213,6 +214,8 @@ function Homepage() {
           </Col>
         </Row>
       </Container>
+
+      <Slider />
     </div>
   );
 }
