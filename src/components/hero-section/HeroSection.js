@@ -8,10 +8,10 @@ function HeroSection() {
       <Form className='form'>
         <p className=''>search for available buses</p>
         <Form.Row>
-          <Col xs={6} md={4}>
+          <Col className="input-form" xs={12} md={4}>
             <Form.Control placeholder='From' />
           </Col>
-          <Col xs={6} md={4}>
+          <Col className="input-form" xs={12} md={4}>
             <Form.Control placeholder='To' />
           </Col>
           <Col xs={12} md={4} className='text-center'>
