@@ -51,7 +51,7 @@ function AboutPage() {
           </Col>
         </Row>
       </Container>
-      <Container className='text-center my-5 my-auto'>
+      <Container className='text-center my-5 my-auto service'>
         <Row>
           <Col xs={12} md={6}>
             <div className='our-services'>
