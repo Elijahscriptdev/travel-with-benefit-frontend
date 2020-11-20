@@ -24,3 +24,9 @@
   color: #ff7f00;
   margin: 25px;
 }
+
+@media screen and (max-width: 500px) {
+  .places-card {
+    margin: 20px;
+  }
+}

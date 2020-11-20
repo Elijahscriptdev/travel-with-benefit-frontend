@@ -87,7 +87,7 @@ function Homepage() {
           <h3>Most Visited Places</h3>
         </div>
         <Row>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
@@ -103,7 +103,7 @@ function Homepage() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
@@ -119,7 +119,7 @@ function Homepage() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
@@ -135,7 +135,7 @@ function Homepage() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
