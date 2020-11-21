@@ -155,7 +155,7 @@ function Homepage() {
         </Row>
       </Container>
 
-      <Container className='testimony'>
+      <Container className='testimony text-center'>
         <h2>What they say about us ...</h2>
         <Row>
           <Col xs={12} md={4} className='my-3'>
