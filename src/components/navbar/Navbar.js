@@ -70,7 +70,7 @@ function Navbar() {
               </Link>
             </li> */}
             <li className='nav-items'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/bookings-listings' className='nav-links' onClick={closeMobileMenu}>
                 Book a Ticket
               </Link>
             </li>

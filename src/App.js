@@ -6,19 +6,20 @@ import Footer from "./components/footer/Footer";
 import Homepage from "./components/homepage/Homepage";
 import Navbar from "./components/navbar/Navbar";
 import AboutPage from "./components/aboutpage/AboutPage";
+import Booking from "./components/bookings/Booking";
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        {/* <Homepage /> */}
 
         <Switch>
           <Route path='/' exact component={Homepage} />
           {/* <Route path='/' exact component={Home} />
           <Route path='/contact-us' component={contactUs} />
           <Route path='/post/:postId' component={Post} /> */}
+          <Route path='/bookings-listings' component={Booking} />
           <Route path='/about-us' exact component={AboutPage} />
         </Switch>
         <Footer />
