@@ -20,7 +20,7 @@
     color: #2a527b;
   } */
 
-form {
+.contact-form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
