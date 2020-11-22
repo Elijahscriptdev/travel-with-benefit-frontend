@@ -1,30 +1,8 @@
-// import React, { useState } from "react";
-
-// import { TextField, Button } from "@material-ui/core";
-// function CountactUs() {
-//   const [email, setEmail] = useState("");
-//   const [name, setName] = useState("");
-//   const [subject, setSubject] = useState("");
-//   const [message, setMessage] = useState("");
-// return(
-//  <div>
-//    <form>
-
-//    <form>
-//  </div>
-// )
-
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-// import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import "./Contact.css";
 
 function Contact() {
-  //   const [email, setEmail] = useState("");
-  //   const [name, setName] = useState("");
-  //   const [subject, setSubject] = useState("");
-  //   const [message, setMessage] = useState("");
 
   const [formData, setFormData] = useState({
     email: "",
