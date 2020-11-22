@@ -32,7 +32,7 @@ function Contact() {
   return (
     <div className='contact p-4'>
       <h1 className='text-center text-bold'>Get in Touch</h1>
-      <Form onSubmit={(e) => onSubmit(e)}>
+      <Form className="contact-form" onSubmit={(e) => onSubmit(e)}>
         <Form.Group controlId='exampleForm.ControlInput1'>
           <Form.Label>Email address</Form.Label>
           <Form.Control
