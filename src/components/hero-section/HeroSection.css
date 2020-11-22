@@ -21,12 +21,12 @@
 
 .hero-container > h1 {
   color: #fff;
-  font-size: 100px;
-  margin-top: -100px;
+  font-size: 80px;
+  margin-top: 40px;
 }
 
 .hero-container > p {
-  margin-top: 8px;
+  margin-top: 2px;
   color: #fff;
   font-size: 32px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -34,7 +34,7 @@
 }
 
 .hero-btns {
-  margin-top: 32px;
+  margin-top: 10px;
 }
 
 .hero-btns .btn {
@@ -48,14 +48,14 @@
 @media screen and (max-width: 960px) {
   .hero-container > h1 {
     font-size: 70px;
-    margin-top: -150px;
+    /* margin-top: -150px; */
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero-container > h1 {
     font-size: 50px;
-    margin-top: -100px;
+    /* margin-top: -100px; */
   }
 
   .hero-container > p {
@@ -75,7 +75,7 @@
 @media screen and (max-width: 500px) {
   .hero-container > h1 {
     font-size: 35px;
-    margin-top: -50px;
+    /* margin-top: -50px; */
   }
 
   .hero-container > p {
@@ -90,4 +90,35 @@
   .btn {
     width: 100%;
   }
+
+  .btn-form {
+    width: 100% !important;
+    background: #ff7f00;
+    margin-top: 15px;
+  }
+
+  .input-form {
+    margin-top: 10px;
+  }
+}
+
+.form {
+  /* background: linear-gradient(
+	rgba(24, 23, 23, 0.45), 
+	rgba(15, 6, 6, 0.45)
+  ); */
+  background: #fff;
+  padding: 20px 35px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.form p {
+  font-weight: bold;
+  color: #ff7f00;
+}
+
+.btn-form {
+  width: 100% !important;
+  background: #ff7f00;
 }

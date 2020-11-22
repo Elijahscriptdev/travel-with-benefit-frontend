@@ -24,3 +24,13 @@
   color: #ff7f00;
   margin: 25px;
 }
+
+.fa-star{
+  color: #ff7f00;
+}
+
+@media screen and (max-width: 500px) {
+  .places-card {
+    margin: 20px;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../hero-section/HeroSection";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Homepage.css";
+import Slider from "../slider/Slider";
 
 function Homepage() {
   return (
@@ -87,7 +88,7 @@ function Homepage() {
           <h3>Most Visited Places</h3>
         </div>
         <Row>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
@@ -103,7 +104,7 @@ function Homepage() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
@@ -119,7 +120,7 @@ function Homepage() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
@@ -135,7 +136,7 @@ function Homepage() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={3}>
+          <Col className='places-card' xs={12} md={3}>
             <Card>
               <Card.Img
                 variant='top'
@@ -154,7 +155,7 @@ function Homepage() {
         </Row>
       </Container>
 
-      <Container className='testimony'>
+      <Container className='testimony text-center'>
         <h2>What they say about us ...</h2>
         <Row>
           <Col xs={12} md={4} className='my-3'>
@@ -213,6 +214,8 @@ function Homepage() {
           </Col>
         </Row>
       </Container>
+
+      <Slider />
     </div>
   );
 }
