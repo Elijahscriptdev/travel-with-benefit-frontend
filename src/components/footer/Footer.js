@@ -32,13 +32,13 @@ function Footer() {
             <Link to='/'>Testimonials</Link>
             <Link to='/'>Careers</Link>
             {/* <Link to='/'>Investors</Link> */}
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/terms-and-conditions'>Terms of Service</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
+            <Link to='/contact-us'>Contact</Link>
             <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
+            <Link to='/all-destinations'>Destinations</Link>
             <Link to='/'>Sponsorships</Link>
           </div>
         </div>
