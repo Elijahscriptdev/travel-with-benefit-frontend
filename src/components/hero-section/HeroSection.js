@@ -6,15 +6,18 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       <Form className='form'>
-        <p className=''>search for available buses</p>
+        <p className=''>Search for available buses</p>
         <Form.Row>
-          <Col className="input-form" xs={12} md={4}>
+          <Col className="input-form" xs={12} md={3}>
             <Form.Control placeholder='From' />
           </Col>
-          <Col className="input-form" xs={12} md={4}>
+          <Col className="input-form" xs={12} md={3}>
             <Form.Control placeholder='To' />
           </Col>
-          <Col xs={12} md={4} className='text-center'>
+          <Col className="input-form" xs={12} md={3}>
+            <Form.Control placeholder='Date' />
+          </Col>
+          <Col xs={12} md={3} className='text-center'>
             <button className='btn btn-secondary btn-form'>PROCEED</button>
           </Col>
         </Form.Row>
