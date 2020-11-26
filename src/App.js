@@ -13,18 +13,19 @@ import Terms from "./components/terms/Terms";
 import Destinations from "./components/booking/Destinations";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+// Redux
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import Alert from "./components/alert/Alert";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <Navbar />
-
+        <Alert />
+        <Route path='/' exact component={Homepage} />
         <Switch>
-          <Route path='/' exact component={Homepage} />
-          {/* <Route path='/' exact component={Home} />
-          <Route path='/post/:postId' component={Post} /> */}
-          {/* <Route path='/booking/lstin' component={Contact} /> */}
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route path='/contact-us' component={Contact} />
@@ -36,7 +37,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </>
+    </Provider>
   );
 }
 
