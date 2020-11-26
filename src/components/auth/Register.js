@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { setAlert } from "../../redux/actions/alert";
-// import { register } from "../../actions/auth";
+import { register } from "../../redux/actions/auth";
 import PropTypes from "prop-types";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -30,7 +30,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     } else {
       console.log(formData);
       console.log("form submitted");
-      // register({ name, email, password });
+      register({ first_name, last_name, email, password });
     }
     // console.log(formData);
     // console.log("form submitted");
@@ -109,7 +109,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
-  // register: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
   // isAuthenticated: PropTypes.bool,
 };
 
@@ -117,4 +117,4 @@ Register.propTypes = {
 //   isAuthenticated: state.auth.isAuthenticated,
 // });
 
-export default connect(null, { setAlert })(Register);
+export default connect(null, { setAlert, register })(Register);
