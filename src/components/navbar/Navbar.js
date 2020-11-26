@@ -85,12 +85,17 @@ function Navbar() {
             </li> */}
             <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Account <i class='fas fa-user'></i>
+                Account <i className='fas fa-user'></i>
+              </Link>
+            </li>
+            <li className='nav-items'>
+              <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
+                Login
               </Link>
             </li>
             <li className='nav-items'>
               <Link
-                to='/sign-up'
+                to='/register'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
