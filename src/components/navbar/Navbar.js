@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "../button/Button";
+// import { Button } from "../button/Button";
 import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  // const [button, setButton] = useState(true);
 
   const handleClick = () => {
     setClick(!click);
@@ -13,19 +13,19 @@ function Navbar() {
 
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
+  // const showButton = () => {
+  //   if (window.innerWidth <= 960) {
+  //     setButton(false);
+  //   } else {
+  //     setButton(true);
+  //   }
+  // };
 
-  useEffect(() => {
-    showButton();
-  }, []);
+  // useEffect(() => {
+  //   showButton();
+  // }, []);
 
-  window.addEventListener("resize", showButton);
+  // window.addEventListener("resize", showButton);
 
   return (
     <>
@@ -70,7 +70,11 @@ function Navbar() {
               </Link>
             </li> */}
             <li className='nav-items'>
-              <Link to='/bookings-listings' className='nav-links' onClick={closeMobileMenu}>
+              <Link
+                to='/bookings-listings'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
                 Book a Ticket
               </Link>
             </li>
@@ -79,22 +83,27 @@ function Navbar() {
                 FAQ Page
               </Link>
             </li> */}
-            {/* <li className='nav-items'>
+            <li className='nav-items'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Account <i class='fas fa-user'></i>
+                Account <i className='fas fa-user'></i>
               </Link>
-            </li> */}
+            </li>
+            <li className='nav-items'>
+              <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
+                Login
+              </Link>
+            </li>
             <li className='nav-items'>
               <Link
-                to='/sign-up'
-                className='nav-links-mobile'
+                to='/register'
+                className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Sign Up
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         </div>
       </nav>
     </>

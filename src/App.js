@@ -3,26 +3,31 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Footer from "./components/footer/Footer";
-import Homepage from "./components/homepage/Homepage";
+import Homepage from "./pages/homepage/Homepage";
 import Navbar from "./components/navbar/Navbar";
-import AboutPage from "./components/aboutpage/AboutPage";
+import AboutPage from "./pages/aboutpage/AboutPage";
 import Contact from "./components/contact/Contact";
 import BookingInfo from "./components/booking/BookingInfo";
 import BusListings from "./components/booking/BusListings";
 import Terms from "./components/terms/Terms";
 import Destinations from "./components/booking/Destinations";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+// Redux
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import Alert from "./components/alert/Alert";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <Navbar />
-
+        <Alert />
+        <Route path='/' exact component={Homepage} />
         <Switch>
-          <Route path='/' exact component={Homepage} />
-          {/* <Route path='/' exact component={Home} />
-          <Route path='/post/:postId' component={Post} /> */}
-          {/* <Route path='/booking/lstin' component={Contact} /> */}
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/register' component={Register} />
           <Route path='/contact-us' component={Contact} />
           <Route path='/booking-info' component={BookingInfo} />
           <Route path='/bus/listings' component={BusListings} />
@@ -32,7 +37,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </>
+    </Provider>
   );
 }
 
