@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -17,8 +17,14 @@ import Register from "./components/auth/Register";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Alert from "./components/alert/Alert";
+import { loadUser } from "./redux/actions/auth";
 
 function App() {
+  // always make sure the user is authenticated if token in the localstorage is valid
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
   return (
     <Provider store={store}>
       <Router>

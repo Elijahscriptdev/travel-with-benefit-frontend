@@ -1,11 +1,10 @@
 import axios from "axios";
-// import setAuthToken from "../utils/setAuthToken";
 import { setAlert } from "./alert";
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
-  //   USER_LOADED,
-  //   AUTH_ERROR,
+  USER_LOADED,
+  AUTH_ERROR,
   //   LOGIN_SUCCESS,
   //   LOGIN_FAIL,
   //   LOGOUT,
@@ -13,24 +12,28 @@ import {
 } from "./types";
 
 // LOAD user
-// export const loadUser = () => async (dispatch) => {
-//   if (localStorage.token) {
-//     setAuthToken(localStorage.token);
-//   }
+export const loadUser = () => async (dispatch) => {
+  const token = localStorage.getItem("token");
 
-//   try {
-//     const res = await axios.get("/api/auth");
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
 
-//     dispatch({
-//       type: USER_LOADED,
-//       payload: res.data,
-//     });
-//   } catch (error) {
-//     dispatch({
-//       type: AUTH_ERROR,
-//     });
-//   }
-// };
+  try {
+    const res = await axios.get("http://localhost:3000/auto_login", config);
+
+    dispatch({
+      type: USER_LOADED,
+      payload: res.data,
+    });
+  } catch (error) {
+    dispatch({
+      type: AUTH_ERROR,
+    });
+  }
+};
 
 // Register User
 export const register = ({ first_name, last_name, email, password }) => async (
