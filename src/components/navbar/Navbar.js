@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { logout } from "../../redux/actions/auth";
 import { Link } from "react-router-dom";
 // import { Button } from "../button/Button";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ auth: { isAuthenticated, loading }, logout }) {
   const [click, setClick] = useState(false);
-  // const [button, setButton] = useState(true);
 
   const handleClick = () => {
     setClick(!click);
@@ -13,19 +15,85 @@ function Navbar() {
 
   const closeMobileMenu = () => setClick(false);
 
-  // const showButton = () => {
-  //   if (window.innerWidth <= 960) {
-  //     setButton(false);
-  //   } else {
-  //     setButton(true);
-  //   }
-  // };
+  const authLinks = (
+    <ul className={click ? "nav-menu active" : "nav-menu"}>
+      <li className='nav-items'>
+        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+          Home
+        </Link>
+      </li>
+      <li className='nav-items'>
+        <Link to='/about-us' className='nav-links' onClick={closeMobileMenu}>
+          About
+        </Link>
+      </li>
+      <li className='nav-items'>
+        <a href='/#partner' className='nav-links' onClick={closeMobileMenu}>
+          Our Partners
+        </a>
+      </li>
+      <li className='nav-items'>
+        <Link
+          to='/bookings-listings'
+          className='nav-links'
+          onClick={closeMobileMenu}
+        >
+          Book a Ticket
+        </Link>
+      </li>
 
-  // useEffect(() => {
-  //   showButton();
-  // }, []);
+      <li className='nav-items'>
+        <Link to='/dashboard' className='nav-links' onClick={closeMobileMenu}>
+          Dashboard <i className='fas fa-user'></i>
+        </Link>
+      </li>
+      <li className='nav-items' onClick={closeMobileMenu}>
+        <Link to='/login' onClick={logout} className='nav-links'>
+          Logout
+        </Link>
+      </li>
+    </ul>
+  );
 
-  // window.addEventListener("resize", showButton);
+  const guestLinks = (
+    <ul className={click ? "nav-menu active" : "nav-menu"}>
+      <li className='nav-items'>
+        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+          Home
+        </Link>
+      </li>
+      <li className='nav-items'>
+        <Link to='/about-us' className='nav-links' onClick={closeMobileMenu}>
+          About
+        </Link>
+      </li>
+      <li className='nav-items'>
+        <a href='/#partner' className='nav-links' onClick={closeMobileMenu}>
+          Our Partners
+        </a>
+      </li>
+      <li className='nav-items'>
+        <Link
+          to='/bookings-listings'
+          className='nav-links'
+          onClick={closeMobileMenu}
+        >
+          Book a Ticket
+        </Link>
+      </li>
+
+      <li className='nav-items'>
+        <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
+          Login
+        </Link>
+      </li>
+      <li className='nav-items'>
+        <Link to='/register' className='nav-links' onClick={closeMobileMenu}>
+          Sign Up
+        </Link>
+      </li>
+    </ul>
+  );
 
   return (
     <>
@@ -37,77 +105,20 @@ function Navbar() {
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className='nav-items'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className='nav-items'>
-              <Link
-                to='/about-us'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                About
-              </Link>
-            </li>
-            <li className='nav-items'>
-              {/* <Link to='/home/#partner' className='nav-links' onClick={closeMobileMenu}>
-                Our Partners
-              </Link> */}
-              <a
-                href='/#partner'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Our Partners
-              </a>
-            </li>
-            {/* <li className='nav-items'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Testimonial
-              </Link>
-            </li> */}
-            <li className='nav-items'>
-              <Link
-                to='/bookings-listings'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Book a Ticket
-              </Link>
-            </li>
-            {/* <li className='nav-items'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                FAQ Page
-              </Link>
-            </li> */}
-            <li className='nav-items'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Account <i className='fas fa-user'></i>
-              </Link>
-            </li>
-            <li className='nav-items'>
-              <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
-                Login
-              </Link>
-            </li>
-            <li className='nav-items'>
-              <Link
-                to='/register'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li>
-          </ul>
-          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
+          {!loading && isAuthenticated ? authLinks : guestLinks}
         </div>
       </nav>
     </>
   );
 }
 
-export default Navbar;
+Navbar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { logout })(Navbar);
