@@ -5,10 +5,9 @@ import {
   REGISTER_FAIL,
   USER_LOADED,
   AUTH_ERROR,
-  //   LOGIN_SUCCESS,
-  //   LOGIN_FAIL,
-  //   LOGOUT,
-  //   CLEAR_PROFILE,
+  LOGIN_SUCCESS,
+  LOGIN_FAIL,
+  LOGOUT,
 } from "./types";
 
 // LOAD user
@@ -53,6 +52,7 @@ export const register = ({ first_name, last_name, email, password }) => async (
       type: REGISTER_SUCCESS,
       payload: res.data,
     });
+    // dispatch(loadUser());
   } catch (error) {
     dispatch(setAlert(error.response.data.errors, "danger"));
     console.log(error.response.data.errors);
@@ -62,41 +62,44 @@ export const register = ({ first_name, last_name, email, password }) => async (
   }
 };
 
-// // Login User
-// export const login = (email, password) => async (dispatch) => {
-//   const config = {
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   };
+// Login User
+export const login = ({ email, password }) => async (dispatch) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
 
-//   const body = JSON.stringify({ email, password });
+  const body = JSON.stringify({ email, password });
 
-//   try {
-//     const res = await axios.post("/api/auth", body, config);
-//     dispatch({
-//       type: LOGIN_SUCCESS,
-//       payload: res.data,
-//     });
+  try {
+    const res = await axios.post("http://localhost:3000/login", body, config);
+    console.log(res.data);
+    if (res.data.failure === "Log in failed! Username or password invalid!") {
+      const errorArr = { Failure: [[res.data]] };
+      dispatch({
+        type: LOGIN_FAIL,
+        payload: errorArr,
+      });
+    } else {
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: res.data,
+      });
+    }
+    // dispatch(loadUser());
+  } catch (error) {
+    dispatch(setAlert(error.response.data.errors, "danger"));
+    console.log(error.response.data.errors);
+    dispatch({
+      type: LOGIN_FAIL,
+    });
+  }
+};
 
-//     dispatch(loadUser());
-//   } catch (error) {
-//     const errors = error.response.data.errors;
-//     if (errors) {
-//       errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
-//     }
-//     dispatch({
-//       type: LOGIN_FAIL,
-//     });
-//   }
-// };
-
-// // LOGOUT
-// export const logout = () => (dispatch) => {
-//   dispatch({
-//     type: CLEAR_PROFILE,
-//   });
-//   dispatch({
-//     type: LOGOUT,
-//   });
-// };
+// LOGOUT
+export const logout = () => (dispatch) => {
+  dispatch({
+    type: LOGOUT,
+  });
+};

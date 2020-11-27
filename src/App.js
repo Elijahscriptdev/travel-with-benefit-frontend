@@ -18,6 +18,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Alert from "./components/alert/Alert";
 import { loadUser } from "./redux/actions/auth";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   // always make sure the user is authenticated if token in the localstorage is valid
@@ -32,6 +33,7 @@ function App() {
         <Alert />
         <Route path='/' exact component={Homepage} />
         <Switch>
+        <Route exact path='/dashboard' component={Dashboard} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route path='/contact-us' component={Contact} />
