@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from "react";
-import { Link } from "react-router-dom";
-// import { connect } from "react-redux";
-// import PropTypes from "prop-types";
-// import { setAlert } from "../../actions/alert";
-// import { login } from "../../actions/auth";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { setAlert } from "../../redux/actions/alert";
+import { login } from "../../redux/actions/auth";
 
-const Login = () => {
+const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -23,13 +23,13 @@ const Login = () => {
     e.preventDefault();
     console.log(formData);
     console.log("form submitted");
-    // login(email, password);
+    login({ email, password });
   };
 
   // redirect if login
-  // if (isAuthenticated) {
-  //   return <Redirect to='/dashboard' />;
-  // }
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
 
   return (
     <Fragment>
@@ -55,7 +55,7 @@ const Login = () => {
             value={password}
             name='password'
             onChange={(e) => onChange(e)}
-            minLength='6'
+            // minLength='6'
           />
         </div>
         <input type='submit' className='btn btn-primary' value='Login' />
@@ -67,14 +67,14 @@ const Login = () => {
   );
 };
 
-// Login.propTypes = {
-//   login: PropTypes.func.isRequired,
-//   isAuthenticated: PropTypes.bool,
-// };
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+  setAlert: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
+};
 
-// const mapStateToProps = (state) => ({
-//   isAuthenticated: state.auth.isAuthenticated,
-// });
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
 
-// export default connect(mapStateToProps, { login })(Login);
-export default Login;
+export default connect(mapStateToProps, { login, setAlert })(Login);
