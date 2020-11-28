@@ -22,11 +22,18 @@ export const loadUser = () => async (dispatch) => {
 
   try {
     const res = await axios.get("http://localhost:3000/auto_login", config);
-
-    dispatch({
-      type: USER_LOADED,
-      payload: res.data,
-    });
+    if (res.data.errors === "No User Logged In") {
+      const errorArr = { Failure: [[res.data]] };
+      dispatch({
+        type: AUTH_ERROR,
+        payload: errorArr,
+      });
+    } else {
+      dispatch({
+        type: USER_LOADED,
+        payload: res.data,
+      });
+    }
   } catch (error) {
     dispatch({
       type: AUTH_ERROR,
@@ -52,7 +59,7 @@ export const register = ({ first_name, last_name, email, password }) => async (
       type: REGISTER_SUCCESS,
       payload: res.data,
     });
-    // dispatch(loadUser());
+    dispatch(loadUser());
   } catch (error) {
     dispatch(setAlert(error.response.data.errors, "danger"));
     console.log(error.response.data.errors);
@@ -74,7 +81,6 @@ export const login = ({ email, password }) => async (dispatch) => {
 
   try {
     const res = await axios.post("http://localhost:3000/login", body, config);
-    console.log(res.data);
     if (res.data.failure === "Log in failed! Username or password invalid!") {
       const errorArr = { Failure: [[res.data]] };
       dispatch({
@@ -87,7 +93,7 @@ export const login = ({ email, password }) => async (dispatch) => {
         payload: res.data,
       });
     }
-    // dispatch(loadUser());
+    dispatch(loadUser());
   } catch (error) {
     dispatch(setAlert(error.response.data.errors, "danger"));
     console.log(error.response.data.errors);
