@@ -11,13 +11,14 @@ export const getProfile = ({ email }) => async (dispatch) => {
   const body = JSON.stringify({ email });
   try {
     const res = await axios.get("http://localhost:3000/booking-history");
-    console.log("message", res)
+    console.log("message", res);
     dispatch({
       type: BOOKING_SUCCESS,
       payload: res.data,
     });
-  } catch (error) {}
-  dispatch({
-    type: BOOKING_FAILURE,
-  });
+  } catch (error) {
+    dispatch({
+      type: BOOKING_FAILURE,
+    });
+  }
 };
