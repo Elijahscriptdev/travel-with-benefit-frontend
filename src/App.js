@@ -13,6 +13,7 @@ import Terms from "./components/terms/Terms";
 import Destinations from "./components/booking/Destinations";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+import PrivateRoute from "./pages/routing/PrivateRoute"
 // Redux
 import { Provider } from "react-redux";
 import store from "./redux/store";
@@ -33,7 +34,7 @@ function App() {
         <Alert />
         <Route path='/' exact component={Homepage} />
         <Switch>
-        <Route exact path='/dashboard' component={Dashboard} />
+        <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route path='/contact-us' component={Contact} />
