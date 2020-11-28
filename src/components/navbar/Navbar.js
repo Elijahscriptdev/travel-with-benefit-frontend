@@ -48,7 +48,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
         </Link>
       </li>
       <li className='nav-items' onClick={closeMobileMenu}>
-        <Link to='/login' onClick={logout} className='nav-links'>
+        <Link to='/' onClick={logout} className='nav-links'>
           Logout
         </Link>
       </li>
