@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 // import PropTypes from "prop-types";
 // import { connect } from "react-redux";
@@ -63,7 +63,7 @@ const Dashboard = () => {
 
       <div>
         {booking.map((booking, index) => (
-          <p key={booking.id}>{booking.email}</p>
+          <p key={index}>{booking.email}</p>
         ))}
       </div>
     </div>
