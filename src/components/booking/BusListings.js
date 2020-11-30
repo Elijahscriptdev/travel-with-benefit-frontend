@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { Col, Form } from "react-bootstrap";
 import "./Booking.css";
 
 const BusListings = () => {
   const [info, setInfo] = useState([]);
+  // const [selected, setSelected] = useState({
+  //   departure: "",
+  //   destination: "",
+  //   travel_date: "",
+  //   bus_type: "",
+  //   bus_company: "",
+  //   price: "",
+  //   travel_time: "",
+  // });
+  const history = useHistory();
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("travel-info"));
@@ -16,15 +27,27 @@ const BusListings = () => {
     departure: "",
     destination: "",
     travel_date: "",
+    bus_type: "",
+    bus_company: "",
+    price: "",
+    travel_time: "",
   });
 
-  const { departure, destination, travel_date } = formData;
+  const { departure, destination, travel_date, bus_type, bus_company, price, travel_time } = formData;
 
   const onChange = (e) =>
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+  const onClick = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    console.log("form submitted");
+    // localStorage.setItem("travel-info", JSON.stringify(res.data));
+    // history.push("/");
+  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -47,15 +70,18 @@ const BusListings = () => {
       );
       localStorage.setItem("travel-info", JSON.stringify(res.data));
       const data = JSON.parse(localStorage.getItem("travel-info"));
+      console.log(data)
       setInfo(data);
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <div className='background'>
       <div className='container py'>
-        <Form className='form my-5' onSubmit={(e) => onSubmit(e)}>
+        <h1>UPDATE SEARCH</h1>
+        <Form className='form my-3' onSubmit={(e) => onSubmit(e)}>
           <p className=''>Search for available buses</p>
           <Form.Row>
             <Col className='input-form' xs={12} md={3}>
@@ -87,9 +113,91 @@ const BusListings = () => {
             </Col>
           </Form.Row>
         </Form>
+
         <h1 className='text-bold'>RESULT OF SEARCH</h1>
-        {info.map((data) => (
-          <div className='card p-2'>
+        {info.map((data, index) => (
+        <div className='card p-2 my-4'>
+          <form className=''>
+            <div className='box-container'>
+              <div className='box m-1'>
+                <label>Departure</label>
+                <input
+                  type='text'
+                  className='form-'
+                  value={data.departure}
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div className='box m-1'>
+                <label>Destination</label>
+                <input
+                  type='text'
+                  className='form-'
+                  value={data.destination}
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div className='box m-1'>
+                <label>Bus</label>
+                <input
+                  type='text'
+                  className='form-'
+                  value={data.bus_type}
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div className='box m-1'>
+                <label>Company</label>
+                <input
+                  type='text'
+                  className='form-'
+                  value={data.bus_company}
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div className='box m-1'>
+                <label>price</label>
+                <input
+                  type='text'
+                  className='form-'
+                  value={data.price}
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div className='box m-1'>
+                <label>Date</label>
+                <input
+                  type='text'
+                  className='form-'
+                  value={data.travel_date}
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div className='box m-1'>
+                <label>Time</label>
+                <input
+                  type='text'
+                  className='form-'
+                  value={data.travel_time}
+                  onChange={(e) => onChange(e)}
+                />
+              </div>
+              <div className='box m-1'>
+                <label>{data.price}</label>
+                <button
+                  type='button'
+                  className='btn-list'
+                  onClick={(e) => onClick(e)}
+                >
+                  Proceed
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        ))}
+        {/* {info.map((data, index) => (
+          <div className='card p-2' key={index}>
             <div className='box-container'>
               <ul className='m-1 box text-'>
                 <li className='title my-2'>Departure</li>
@@ -122,14 +230,18 @@ const BusListings = () => {
               <ul className='m-1 box text-'>
                 <li className='title my-2'>{data.price}</li>
                 <li>
-                  <button type='submit' className='px-1 btn-list'>
+                  <button
+                    type='submit'
+                    className='px-1 btn-list'
+                    onClick={(e) => onClick(e)}
+                  >
                     Proceed
                   </button>
                 </li>
               </ul>
             </div>
-            </div>
-        ))}
+          </div>
+        ))} */}
       </div>
     </div>
   );

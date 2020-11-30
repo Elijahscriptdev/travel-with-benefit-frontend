@@ -33,7 +33,7 @@ const Dashboard = () => {
         { params: { email: data.email } },
         config
       );
-      console.log("message", res.data);
+      console.log(res.data);
       setBooking(res.data);
     } catch (error) {
       console.log(error);
