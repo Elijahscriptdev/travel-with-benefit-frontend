@@ -6,24 +6,11 @@ import "./Booking.css";
 
 const BusListings = () => {
   const [info, setInfo] = useState([]);
-  // const [selected, setSelected] = useState({
-  //   departure: "",
-  //   destination: "",
-  //   travel_date: "",
-  //   bus_type: "",
-  //   bus_company: "",
-  //   price: "",
-  //   travel_time: "",
-  // });
-  const history = useHistory();
-
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("travel-info"));
-    setInfo(data);
-    console.log(data);
-  }, []);
-
-  const [formData, setFormData] = useState({
+  // useEffect(() => {
+  //   // setSelected(selected)
+  // console.log(selected);
+  // }, [])
+  const [selected, setSelected] = useState({
     departure: "",
     destination: "",
     travel_date: "",
@@ -32,22 +19,51 @@ const BusListings = () => {
     price: "",
     travel_time: "",
   });
+  const history = useHistory();
 
-  const { departure, destination, travel_date, bus_type, bus_company, price, travel_time } = formData;
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("travel-info"));
+    setInfo(data);
+    // setFormData(data);
+    setSelected(true);
+  }, []);
 
-  const onChange = (e) =>
+  const [formData, setFormData] = useState({
+    departure: "",
+    destination: "",
+    travel_date: ""
+  });
+
+  const {
+    departure,
+    destination,
+    travel_date
+  } = formData;
+
+  const onChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
 
   const onClick = (e) => {
-    e.preventDefault();
-    console.log(formData);
+    // e.preventDefault();
+    setSelected({
+        departure: document.getElementsByClassName("1")[0].value,
+        destination: document.getElementsByClassName("2")[0].value,
+        travel_date: document.getElementsByClassName("3")[0].value,
+        bus_type: document.getElementsByClassName("4")[0].value,
+        bus_company: document.getElementsByClassName("5")[0].value,
+        price: document.getElementsByClassName("6")[0].value,
+        travel_time: document.getElementsByClassName("7")[0].value,
+      });
+    console.log(selected);
     console.log("form submitted");
-    // localStorage.setItem("travel-info", JSON.stringify(res.data));
+    localStorage.setItem("selected", JSON.stringify(selected));
     // history.push("/");
   };
+  
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -70,7 +86,7 @@ const BusListings = () => {
       );
       localStorage.setItem("travel-info", JSON.stringify(res.data));
       const data = JSON.parse(localStorage.getItem("travel-info"));
-      console.log(data)
+      console.log(data);
       setInfo(data);
     } catch (error) {
       console.log(error);
@@ -116,85 +132,92 @@ const BusListings = () => {
 
         <h1 className='text-bold'>RESULT OF SEARCH</h1>
         {info.map((data, index) => (
-        <div className='card p-2 my-4'>
-          <form className=''>
-            <div className='box-container'>
-              <div className='box m-1'>
-                <label>Departure</label>
-                <input
-                  type='text'
-                  className='form-'
-                  value={data.departure}
-                  onChange={(e) => onChange(e)}
-                />
+          <div className='card p-2 my-4' key={index}>
+            <form className=''>
+              <div className='box-container'>
+                <div className='box m-1'>
+                  <label>Departure</label>
+                  <input
+                    type='text'
+                    className='1'
+                    value={data.departure}
+                    name='departure'
+                    // onChange={(e) => onChange(e)}
+                  />
+                </div>
+                <div className='box m-1'>
+                  <label>Destination</label>
+                  <input
+                    type='text'
+                    className='2'
+                    value={data.destination}
+                    name='destination'
+                    // onChange={(e) => onChange(e)}
+                  />
+                </div>
+                <div className='box m-1'>
+                  <label>Bus</label>
+                  <input
+                    type='text'
+                    className='3'
+                    value={data.bus_type}
+                    name='bus_type'
+                    // onChange={(e) => onChange(e)}
+                  />
+                </div>
+                <div className='box m-1'>
+                  <label>Company</label>
+                  <input
+                    type='text'
+                    className='4'
+                    value={data.bus_company}
+                    name='bus_company'
+                    // onChange={(e) => onChange(e)}
+                  />
+                </div>
+                <div className='box m-1'>
+                  <label>price</label>
+                  <input
+                    type='text'
+                    className='5'
+                    value={data.price}
+                    name='price'
+                    // onChange={(e) => onChange(e)}
+                  />
+                </div>
+                <div className='box m-1'>
+                  <label>Date</label>
+                  <input
+                    type='text'
+                    className='6'
+                    value={data.travel_date}
+                    name='travel_date'
+                    // onChange={(e) => onChange(e)}
+                  />
+                </div>
+                <div className='box m-1'>
+                  <label>Time</label>
+                  <input
+                    type='text'
+                    className='7'
+                    value={data.travel_time}
+                    name='travel_time'
+                    // onChange={(e) => onChange(e)}
+                  />
+                </div>
+                <div className='box m-1'>
+                  <label>{data.price}</label>
+                  <button
+                    type='button'
+                    className='btn-list'
+                    onClick={(e) => onClick(e)}
+                  >
+                    Proceed
+                  </button>
+                </div>
               </div>
-              <div className='box m-1'>
-                <label>Destination</label>
-                <input
-                  type='text'
-                  className='form-'
-                  value={data.destination}
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div className='box m-1'>
-                <label>Bus</label>
-                <input
-                  type='text'
-                  className='form-'
-                  value={data.bus_type}
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div className='box m-1'>
-                <label>Company</label>
-                <input
-                  type='text'
-                  className='form-'
-                  value={data.bus_company}
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div className='box m-1'>
-                <label>price</label>
-                <input
-                  type='text'
-                  className='form-'
-                  value={data.price}
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div className='box m-1'>
-                <label>Date</label>
-                <input
-                  type='text'
-                  className='form-'
-                  value={data.travel_date}
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div className='box m-1'>
-                <label>Time</label>
-                <input
-                  type='text'
-                  className='form-'
-                  value={data.travel_time}
-                  onChange={(e) => onChange(e)}
-                />
-              </div>
-              <div className='box m-1'>
-                <label>{data.price}</label>
-                <button
-                  type='button'
-                  className='btn-list'
-                  onClick={(e) => onClick(e)}
-                >
-                  Proceed
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
         ))}
         {/* {info.map((data, index) => (
           <div className='card p-2' key={index}>
