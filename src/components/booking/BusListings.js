@@ -6,10 +6,22 @@ import "./Booking.css";
 
 const BusListings = () => {
   const [info, setInfo] = useState([]);
-  // useEffect(() => {
-  //   // setSelected(selected)
-  // console.log(selected);
-  // }, [])
+
+  const history = useHistory();
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("travel-info"));
+    setInfo(data);
+    // setFormData(data);
+    // setSelected(true);
+  }, []);
+
+  const [formData, setFormData] = useState({
+    departure: "",
+    destination: "",
+    travel_date: "",
+  });
+
   const [selected, setSelected] = useState({
     departure: "",
     destination: "",
@@ -19,53 +31,34 @@ const BusListings = () => {
     price: "",
     travel_time: "",
   });
-  const history = useHistory();
 
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("travel-info"));
-    setInfo(data);
-    // setFormData(data);
-    setSelected(true);
-  }, []);
+  const { departure, destination, travel_date } = formData;
 
-  const [formData, setFormData] = useState({
-    departure: "",
-    destination: "",
-    travel_date: ""
-  });
-
-  const {
-    departure,
-    destination,
-    travel_date
-  } = formData;
-
-  const onChange = (e) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const onClick = (e) => {
-    // e.preventDefault();
+  const handleClick = (e) => {
+    e.preventDefault();
     setSelected({
-        departure: document.getElementsByClassName("1")[0].value,
-        destination: document.getElementsByClassName("2")[0].value,
-        travel_date: document.getElementsByClassName("3")[0].value,
-        bus_type: document.getElementsByClassName("4")[0].value,
-        bus_company: document.getElementsByClassName("5")[0].value,
-        price: document.getElementsByClassName("6")[0].value,
-        travel_time: document.getElementsByClassName("7")[0].value,
-      });
+      departure: document.getElementsByClassName("1")[0].value,
+      destination: document.getElementsByClassName("2")[0].value,
+      travel_date: document.getElementsByClassName("3")[0].value,
+      bus_type: document.getElementsByClassName("4")[0].value,
+      bus_company: document.getElementsByClassName("5")[0].value,
+      price: document.getElementsByClassName("6")[0].value,
+      travel_time: document.getElementsByClassName("7")[0].value,
+    });
     console.log(selected);
     console.log("form submitted");
     localStorage.setItem("selected", JSON.stringify(selected));
     // history.push("/");
   };
-  
 
-  const onSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const config = {
       headers: {
@@ -97,7 +90,7 @@ const BusListings = () => {
     <div className='background'>
       <div className='container py'>
         <h1>UPDATE SEARCH</h1>
-        <Form className='form my-3' onSubmit={(e) => onSubmit(e)}>
+        <Form className='form my-3' onSubmit={(e) => handleSubmit(e)}>
           <p className=''>Search for available buses</p>
           <Form.Row>
             <Col className='input-form' xs={12} md={3}>
@@ -105,7 +98,7 @@ const BusListings = () => {
                 placeholder='From'
                 value={departure}
                 name='departure'
-                onChange={(e) => onChange(e)}
+                onChange={(e) => handleChange(e)}
               />
             </Col>
             <Col className='input-form' xs={12} md={3}>
@@ -113,7 +106,7 @@ const BusListings = () => {
                 placeholder='To'
                 value={destination}
                 name='destination'
-                onChange={(e) => onChange(e)}
+                onChange={(e) => handleChange(e)}
               />
             </Col>
             <Col className='input-form' xs={12} md={3}>
@@ -121,7 +114,7 @@ const BusListings = () => {
                 placeholder='Date'
                 value={travel_date}
                 name='travel_date'
-                onChange={(e) => onChange(e)}
+                onChange={(e) => handleChange(e)}
               />
             </Col>
             <Col xs={12} md={3} className='text-center'>
@@ -133,7 +126,7 @@ const BusListings = () => {
         <h1 className='text-bold'>RESULT OF SEARCH</h1>
         {info.map((data, index) => (
           <div className='card p-2 my-4' key={index}>
-            <form className=''>
+            <form className='' onSubmit={(e) => handleClick(e)}>
               <div className='box-container'>
                 <div className='box m-1'>
                   <label>Departure</label>
@@ -208,9 +201,9 @@ const BusListings = () => {
                 <div className='box m-1'>
                   <label>{data.price}</label>
                   <button
-                    type='button'
+                    type='submit'
                     className='btn-list'
-                    onClick={(e) => onClick(e)}
+                    // onClick={handleClick}
                   >
                     Proceed
                   </button>
