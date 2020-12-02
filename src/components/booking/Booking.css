@@ -1,6 +1,6 @@
 .background{
     background: #F0F2F6;
-    height: 100vh;
+    height: 100%;
 }
 
 .box-container{
@@ -8,57 +8,41 @@
     grid-template-columns: repeat(8, 1fr);
 }
 .box{
-    /* background: #F0F2F6; */
     font-weight: 14px!important;
 }
 
 input[type="text" i] {
     padding: 0!important;
     width: 100%;
-    border: none!important;
+    /* border: none!important; */
 }
 
-/* Tablets, iPads (portrait) ---------- */
 @media screen and (max-width: 768px){
-    /* styles */
     .box-container{
         display: grid;
         grid-template-columns: repeat(4, auto);
     }
 
     .box{
-        /* background: #F0F2F6; */
         font-weight: 12px!important;
     }
 }
 
 @media screen and (max-width: 458px){
-    /* styles */
     .box-container{
         display: grid;
         grid-template-columns: repeat(3, auto);
     }
 }
 
-/* .box .title{
-    font-weight: bold;
-    color: #58595a;
-    border: 1px solid #d6d8db;
-    padding: 3px;
-    background: #e0e6ee;
-} */
 
 .box label{
-    /* font-weight: bold; */
     border: 1px solid #d6d8db;
     padding: 3px;
     width: 100%;
-    /* color: #6a777e; */
     background: #F0F2F6;
 }
 
 .btn-list{
     width: 100%;
-    /* background: #e0e6ee; */
-    /* height: 100%; */
 }
