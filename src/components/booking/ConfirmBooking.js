@@ -1,15 +1,24 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { PaystackButton } from "react-paystack";
 import { useHistory } from "react-router-dom";
 
-const BookingInfo = () => {
-  const data = JSON.parse(localStorage.getItem("info"));
+const API_KEY = process.env.REACT_APP_API_KEY;
+
+const ConfirmBooking = () => {
+  const data = JSON.parse(localStorage.getItem("booking"));
   const history = useHistory();
 
-  const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
+  const config = {
+    reference: data.booking_ref,
+    email: data.email,
+    amount: data.total_price * 100,
+    publicKey: API_KEY,
+  };
+
+  const formData = {
+    first_name: data.first_name,
+    last_name: data.last_name,
+    email: data.email,
     departure: data.departure,
     destination: data.destination,
     bus_type: data.bus_type,
@@ -17,66 +26,56 @@ const BookingInfo = () => {
     travel_date: data.travel_date,
     travel_time: data.travel_time,
     price: data.price,
-    seats: 1,
-    total_price: data.price,
-  });
+    seats: data.seats,
+    total_price: data.total_price,
+  };
 
   const {
-    first_name,
-    last_name,
-    email,
-    departure,
-    destination,
-    bus_type,
-    bus_company,
-    travel_date,
-    travel_time,
+    // first_name,
+    // last_name,
+    // email,
+    // departure,
+    // destination,
+    // bus_type,
+    // bus_company,
+    // travel_date,
+    // travel_time,
     price,
     seats,
     total_price = seats * price,
   } = formData;
 
-  const onChange = (e) =>
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  // const onChange = (e) =>
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+
+  // you can call this function anything
+  const handlePaystackSuccessAction = (reference) => {
+    // Implementation for whatever you want to do with reference and after success call.
+    console.log(reference);
+    localStorage.setItem("ref", JSON.stringify(reference));
+    history.push("/payment-status");
+  };
+
+  // you can call this function anything
+  const handlePaystackCloseAction = () => {
+    // implementation for  whatever you want to do when the Paystack dialog closed.
+    console.log("closed");
+  };
+
+  const componentProps = {
+    ...config,
+    text: "Pay Now",
+    onSuccess: (reference) => handlePaystackSuccessAction(reference),
+    onClose: handlePaystackCloseAction,
+  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
 
-    const body = JSON.stringify({
-      first_name,
-      last_name,
-      email,
-      departure,
-      destination,
-      bus_type,
-      bus_company,
-      travel_date,
-      travel_time,
-      price,
-      total_price: seats * price,
-      seats,
-    });
-
-    try {
-      const res = await axios.post(
-        "http://localhost:3000/book-ticket",
-        body,
-        config
-      );
-      console.log(res);
-      localStorage.setItem("booking", JSON.stringify(res.data));
-      history.push("/confirm-your-bookings");
-    } catch (error) {
-      console.log(error.response);
-    }
+    console.log("working");
   };
 
   return (
@@ -90,9 +89,9 @@ const BookingInfo = () => {
             <input
               type='text'
               className='form-control'
-              value={first_name}
+              value={data.first_name}
               name='first_name'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
           <div className='form-group col-md-4'>
@@ -100,9 +99,9 @@ const BookingInfo = () => {
             <input
               type='text'
               className='form-control'
-              value={last_name}
+              value={data.last_name}
               name='last_name'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
           <div className='form-group col-md-4'>
@@ -110,9 +109,9 @@ const BookingInfo = () => {
             <input
               type='email'
               className='form-control'
-              value={email}
+              value={data.email}
               name='email'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
         </div>
@@ -124,7 +123,7 @@ const BookingInfo = () => {
               className='form-control'
               value={data.departure}
               name='departure'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
           <div className='form-group col-md-4'>
@@ -134,7 +133,7 @@ const BookingInfo = () => {
               className='form-control'
               value={data.destination}
               name='destination'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
           <div className='form-group col-md-4'>
@@ -144,7 +143,7 @@ const BookingInfo = () => {
               className='form-control'
               value={data.bus_type}
               name='bus_type'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
         </div>
@@ -156,7 +155,7 @@ const BookingInfo = () => {
               className='form-control'
               value={data.bus_company}
               name='bus_company'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
           <div className='form-group col-md-4'>
@@ -166,7 +165,7 @@ const BookingInfo = () => {
               className='form-control'
               value={data.travel_time}
               name='travel_time'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
           <div className='form-group col-md-4'>
@@ -176,25 +175,19 @@ const BookingInfo = () => {
               className='form-control'
               value={data.travel_date}
               name='travel_date'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
         </div>
         <div className='form-row'>
           <div className='form-group col-md-4'>
             <label>Seats</label>
-            <select
+            <input
               className='form-control'
               value={seats}
               name='seats'
-              onChange={(e) => onChange(e)}
-            >
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+              //   onChange={(e) => onChange(e)}
+            ></input>
           </div>
           <div className='form-group col-md-4'>
             <label>Price</label>
@@ -203,7 +196,7 @@ const BookingInfo = () => {
               className='form-control'
               value={data.price}
               name='unit_price'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
           <div className='form-group col-md-4'>
@@ -213,16 +206,14 @@ const BookingInfo = () => {
               className='form-control'
               value={seats * price}
               name='total_price'
-              onChange={(e) => onChange(e)}
+              //   onChange={(e) => onChange(e)}
             />
           </div>
         </div>
-        <button type='submit' className='btn btn-primary'>
-          Book Now
-        </button>
+        <PaystackButton {...componentProps} />
       </form>
     </div>
   );
 };
 
-export default BookingInfo;
+export default ConfirmBooking;
