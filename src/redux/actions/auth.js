@@ -21,7 +21,7 @@ export const loadUser = () => async (dispatch) => {
   };
 
   try {
-    const res = await axios.get("http://localhost:3000/auto_login", config);
+    const res = await axios.get("https://travel-backend-api.herokuapp.com/auto_login", config);
     if (res.data.errors === "No User Logged In") {
       const errorArr = { Failure: [[res.data]] };
       dispatch({
@@ -54,7 +54,7 @@ export const register = ({ first_name, last_name, email, password }) => async (
   const body = JSON.stringify({ first_name, last_name, email, password });
 
   try {
-    const res = await axios.post("http://localhost:3000/users", body, config);
+    const res = await axios.post("https://travel-backend-api.herokuapp.com/users", body, config);
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data,
@@ -80,7 +80,7 @@ export const login = ({ email, password }) => async (dispatch) => {
   const body = JSON.stringify({ email, password });
 
   try {
-    const res = await axios.post("http://localhost:3000/login", body, config);
+    const res = await axios.post("https://travel-backend-api.herokuapp.com/login", body, config);
     if (res.data.failure === "Log in failed! Username or password invalid!") {
       const errorArr = { Failure: [[res.data]] };
       dispatch({

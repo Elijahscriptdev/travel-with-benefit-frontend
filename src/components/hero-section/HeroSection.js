@@ -32,7 +32,7 @@ const HeroSection = () => {
     // const body = JSON.stringify({ departure, destination, travel_date });
     try {
       const res = await axios.get(
-        "http://localhost:3000/travel-information/search",
+        "https://travel-backend-api.herokuapp.com/travel-information/search",
         {
           params: {
             departure: departure,

@@ -36,7 +36,7 @@ const BusListings = () => {
     };
     try {
       const res = await axios.get(
-        "http://localhost:3000/travel-information/search",
+        "https://travel-backend-api.herokuapp.com/search",
         {
           params: {
             departure: departure,
