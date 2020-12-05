@@ -67,7 +67,7 @@ const BookingInfo = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/book-ticket",
+        "https://travel-backend-api.herokuapp.com/book-ticket",
         body,
         config
       );
