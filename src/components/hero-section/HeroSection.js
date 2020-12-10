@@ -95,14 +95,14 @@ const HeroSection = () => {
         >
           BOOK NOW
         </Button>
-        <Button
+        {/* <Button
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick={console.log("hey")}
         >
           CONTACT US <i className='far fa-play-circle' />
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
