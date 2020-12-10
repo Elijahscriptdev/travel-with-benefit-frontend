@@ -16,14 +16,14 @@ function Slider() {
       <h1 style={{ textAlign: "center", margin: "15px" }}>Our Partners</h1>
       <div className='App' >
         <Carousel breakPoints={breakPoints}>
-          <Item className='one'>One</Item>
-          <Item className='two'>Two</Item>
-          <Item className='three'>Three</Item>
-          <Item className='four'>Four</Item>
-          <Item className='five'>Five</Item>
-          <Item className='six'>Six</Item>
-          {/* <Item>Seven</Item>
-          <Item>Eight</Item> */}
+          <Item className='one'></Item>
+          <Item className='two'></Item>
+          <Item className='three'></Item>
+          <Item className='four'></Item>
+          <Item className='five'></Item>
+          <Item className='six'></Item>
+          <Item className='seven'></Item>
+          <Item className='eight'></Item>
         </Carousel>
       </div>
     </div>

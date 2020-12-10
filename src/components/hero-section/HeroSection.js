@@ -52,6 +52,7 @@ const HeroSection = () => {
 
   return (
     <div className='hero-container'>
+      {/* <video src="https://res.cloudinary.com/elijjaaahhhh/video/upload/v1607632664/Car_-_11490_ci8erh.mp4" loop autoplay="true" /> */}
       <Form className='form' onSubmit={(e) => onSubmit(e)}>
         <p className=''>Search for available buses</p>
         <Form.Row>

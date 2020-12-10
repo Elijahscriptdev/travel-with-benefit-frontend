@@ -7,45 +7,75 @@
 }
 
 .one {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813472/fas-khan-fG_6H0URdos-unsplash_ykkp3y.jpg");
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635638/unnamed_mqgczj.png");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  width: 100%;
+  height: 150px !important;
 }
 
 .two {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813064/narciso-arellano-773s0MrPTMA-unsplash_sxmnmy.jpg");
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635639/images_10_shmizt.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  width: 100%;
+  height: 150px !important;
 }
 
 .three {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813063/lynda-hinton-qUb4_r8Macg-unsplash_xwktky.jpg");
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635639/images_1_m1vofp.png");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  width: 100%;
+  height: 150px !important;
 }
 
 .four {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813062/jorge-sa-Tri_u7qeqGw-unsplash_z3jjis.jpg");
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635639/images_2_jyl65a.png");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  width: 100%;
+  height: 150px !important;
 }
 
 .five {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg");
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635639/images_16_pfo5iu.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  width: 100%;
+  height: 150px !important;
 }
 
 .six {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605833087/jennifer-molina-VXjtbGjPEUQ-unsplash_mbl1ve.jpg");
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635638/ng-abctra-logo_b712uu.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 150px !important;
+}
+
+.seven {
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635639/images_3_vlqh7x.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  width: 100%;
+  height: 100px !important;
+}
+
+.eight {
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635638/logo_aomuia.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 50px !important;
 }
 
 @media screen and (max-width: 500px) {
