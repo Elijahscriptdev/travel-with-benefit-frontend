@@ -29,7 +29,7 @@ const Dashboard = () => {
     };
     try {
       const res = await axios.get(
-        "http://localhost:3000/booking-history",
+        "https://travel-backend-api.herokuapp.com/booking-history",
         { params: { email: data.email } },
         config
       );
