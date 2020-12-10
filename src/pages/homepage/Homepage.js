@@ -14,11 +14,15 @@ function Homepage() {
           <Col xs={12} md={6} className='text-center m-auto'>
             <h1>WELCOME TO TRAVEL</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
-              tincidunt lorem. Duis gravida, dui nec lacinia sollicitudin, urna
-              ligula laoreet diam, mattis fermentum risus nisi a mi. Suspendisse
-              ut quam blandit, bibendum nibh vel, condimentum est. Donec nisl
-              odio, facilisis sed elementum ac, porta ut lacus.
+              <span className='text-bold'>Travel-with-benefits.com</span> is a
+              transport retail service delivery that enables customers to buy
+              tickets with benefits to enable them access to social services.
+              Our service has been proven to be supportive to Nigerians
+              travelling across the country by road. The benefit of our social
+              retail services enable individuals to have access to various
+              Travel-with-benefits retail service benefits each time they travel
+              with our transport companies listed above with a zero account
+              balance any time, anywhere.
             </p>
           </Col>
           <Col xs={12} md={6}>
@@ -35,8 +39,10 @@ function Homepage() {
         <div className=' text-center'>
           <h1>WHY CHOOSE US</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt utllaf
+            Providing customers-centric retail service delivery solutions for
+            all road users that patronize Travel-with-benefits social service,
+            through user-friendly technologic innovations and administrative
+            benefits.
           </p>
         </div>
         <Row>

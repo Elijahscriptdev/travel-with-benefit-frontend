@@ -86,7 +86,7 @@ const HeroSection = () => {
         </Form.Row>
       </Form>
 
-      <p>What are you waiting for?</p>
+      <p> ...travel smart get benefits</p>
       <div className='hero-btns'>
         <Button
           className='btns'

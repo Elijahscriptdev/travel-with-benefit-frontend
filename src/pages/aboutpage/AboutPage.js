@@ -22,24 +22,28 @@ function AboutPage() {
       </Jumbotron>
       <Container className='welcome my-5'>
         <div className='about-title text-center m-5'>
-          <h2>WELCOME TO TRAVEL</h2>
+          <h2 className='text-uppercase'>
+            Probably the best place to book a ticket
+          </h2>
         </div>
         <Row>
           <Col xs={12} md={6} className='text-center m-auto'>
-            <h3>Probably the best place to book a ticket</h3>
+            <h3></h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
-              tincidunt lorem. Duis gravida, dui nec lacinia sollicitudin, urna
-              ligula laoreet diam, mattis fermentum risus nisi a mi. Suspendisse
-              ut quam blandit, bibendum nibh vel, condimentum est. Donec nisl
-              odio, facilisis sed elementum ac, porta ut lacus.
+              Travel-with-benefits.com is a transport retail service delivery
+              that enables customers to buy tickets with benefits to enable them
+              access to social services. Our service has been proven to be
+              supportive to Nigerians travelling across the country by road. The
+              benefit of our social retail services enable individuals to have
+              access to various Travel-with-benefits retail service benefits
+              each time they travel with our transport companies listed above
+              with a zero account balance any time, anywhere.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
-              tincidunt lorem. Duis gravida, dui nec lacinia sollicitudin, urna
-              ligula laoreet diam, mattis fermentum risus nisi a mi. Suspendisse
-              ut quam blandit, bibendum nibh vel, condimentum est. Donec nisl
-              odio, facilisis sed elementum ac, porta ut lacus.
+              Our social service has created avenues for both the poor, the
+              average and rich Nigerians to have access to medical care, pay
+              bills with ease whenever the need arises through our social retail
+              service providers.
             </p>
           </Col>
           <Col xs={12} md={6}>
@@ -57,8 +61,10 @@ function AboutPage() {
             <div className='our-services'>
               <h3>Our Services</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ducimus quaerat, ullam accusantium maiores libero ab.
+                Providing customers-centric retail service delivery solutions
+                for all road users that patronize Travel-with-benefits social
+                service, through user-friendly technologic innovations and
+                administrative benefits.
               </p>
             </div>
             <img
