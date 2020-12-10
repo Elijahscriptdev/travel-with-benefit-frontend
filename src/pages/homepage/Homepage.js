@@ -27,7 +27,7 @@ function Homepage() {
           </Col>
           <Col xs={12} md={6}>
             <img
-              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605619290/priscilla-du-preez-EFoH8YajQuA-unsplash_bsi3t8.jpg'
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635639/cbf1416d52b34edbbfaf01b7adabc10e_r9a5wt.jpg'
               alt='img'
               className='img-fluid'
             />
