@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { PaystackButton } from "react-paystack";
 import { useHistory } from "react-router-dom";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
 const ConfirmBooking = () => {
   const data = JSON.parse(localStorage.getItem("booking"));
