@@ -22,6 +22,7 @@ import { loadUser } from "./redux/actions/auth";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ConfirmBooking from "./components/booking/ConfirmBooking";
 import Payment from "./components/booking/Payment";
+import ListBookings from "./pages/admin/ListBookings";
 
 function App() {
   // always make sure the user is authenticated if token in the localstorage is valid
@@ -37,6 +38,7 @@ function App() {
         <Route path='/' exact component={Homepage} />
         <Switch>
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
+          <Route exact path='/get-all-bookings' component={ListBookings} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route path='/contact-us' component={Contact} />
