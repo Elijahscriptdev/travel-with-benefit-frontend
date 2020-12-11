@@ -23,7 +23,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import ConfirmBooking from "./components/booking/ConfirmBooking";
 import Payment from "./components/booking/Payment";
 import ListBookings from "./pages/admin/booking/ListBookings";
-import ListTravelInformation from "./pages/admin/ListTravelInformation";
+import ListTravelInformation from "./pages/admin/travelInfo/ListTravelInformation";
 
 function App() {
   // always make sure the user is authenticated if token in the localstorage is valid
