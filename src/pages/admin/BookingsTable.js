@@ -27,7 +27,7 @@ const BookingsTable = ({ data }) => {
           data.map((bookings) => (
             <tr key={bookings.id}>
               <td data-label='email'>{bookings.email}</td>
-              <td scope='row' data-label='first name'>
+              <td data-label='first name'>
                 {bookings.first_name}
               </td>
               <td data-label='last name'>{bookings.last_name}</td>
