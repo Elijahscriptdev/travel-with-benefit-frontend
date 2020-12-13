@@ -20,11 +20,21 @@ class InfoTable extends Component {
     newInfoData: {
       departure: "",
       destination: "",
+      bus_type: "",
+      bus_company: "",
+      travel_date: "",
+      travel_time: "",
+      price: "",
     },
     editInfoData: {
       id: "",
       departure: "",
       destination: "",
+      bus_type: "",
+      bus_company: "",
+      travel_date: "",
+      travel_time: "",
+      price: "",
     },
     newInfoModal: false,
     editInfoModal: false,
@@ -52,6 +62,11 @@ class InfoTable extends Component {
           newInfoData: {
             departure: "",
             destination: "",
+            bus_type: "",
+            bus_company: "",
+            travel_date: "",
+            travel_time: "",
+            price: "",
           },
         });
       });
@@ -64,11 +79,24 @@ class InfoTable extends Component {
   }
 
   updateInfo() {
-    let { departure, destination } = this.state.editInfoData;
+    let {
+      departure,
+      destination,
+      bus_type,
+      bus_company,
+      travel_date,
+      travel_time,
+      price,
+    } = this.state.editInfoData;
     axios
       .put(apiUrl + "/travel_informations/" + this.state.editInfoData.id, {
         departure,
         destination,
+        bus_type,
+        bus_company,
+        travel_date,
+        travel_time,
+        price,
       })
       .then((response) => {
         this._refreshInfo();
@@ -78,14 +106,37 @@ class InfoTable extends Component {
             id: "",
             departure: "",
             destination: "",
+            bus_type: "",
+            bus_company: "",
+            travel_date: "",
+            travel_time: "",
+            price: "",
           },
         });
       });
   }
 
-  editInfo(id, departure, destination) {
+  editInfo(
+    id,
+    departure,
+    destination,
+    bus_type,
+    bus_company,
+    travel_date,
+    travel_time,
+    price
+  ) {
     this.setState({
-      editInfoData: { id, departure, destination },
+      editInfoData: {
+        id,
+        departure,
+        destination,
+        bus_type,
+        bus_company,
+        travel_date,
+        travel_time,
+        price,
+      },
       editInfoModal: !this.state.editInfoModal,
     });
   }
@@ -111,6 +162,11 @@ class InfoTable extends Component {
           <td>{info.id}</td>
           <td>{info.departure}</td>
           <td>{info.destination}</td>
+          <td>{info.bus_type}</td>
+          <td>{info.bus_company}</td>
+          <td>{info.travel_date}</td>
+          <td>{info.travel_time}</td>
+          <td>{info.price}</td>
           <td>
             <Button
               color='success'
@@ -119,7 +175,12 @@ class InfoTable extends Component {
                 this,
                 info.id,
                 info.departure,
-                info.destination
+                info.destination,
+                info.bus_type,
+                info.bus_company,
+                info.travel_date,
+                info.travel_time,
+                info.price
               )}
             >
               Edit
@@ -178,6 +239,71 @@ class InfoTable extends Component {
                 }}
               />
             </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                id='title1'
+                value={this.state.newInfoData.bus_type}
+                onChange={(e) => {
+                  let { newInfoData } = this.state;
+                  newInfoData.bus_type = e.target.value;
+                  this.setState({ newInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                id='title1'
+                value={this.state.newInfoData.bus_company}
+                onChange={(e) => {
+                  let { newInfoData } = this.state;
+                  newInfoData.bus_company = e.target.value;
+                  this.setState({ newInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                id='title1'
+                value={this.state.newInfoData.travel_date}
+                onChange={(e) => {
+                  let { newInfoData } = this.state;
+                  newInfoData.travel_date = e.target.value;
+                  this.setState({ newInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                id='title1'
+                value={this.state.newInfoData.travel_time}
+                onChange={(e) => {
+                  let { newInfoData } = this.state;
+                  newInfoData.travel_time = e.target.value;
+                  this.setState({ newInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                id='title1'
+                value={this.state.newInfoData.price}
+                onChange={(e) => {
+                  let { newInfoData } = this.state;
+                  newInfoData.price = e.target.value;
+                  this.setState({ newInfoData });
+                }}
+              />
+            </FormGroup>
           </ModalBody>
           <ModalFooter>
             <Button color='primary' onClick={this.addInfo.bind(this)}>
@@ -203,7 +329,6 @@ class InfoTable extends Component {
             <FormGroup>
               <Label for='title'>Title</Label>
               <Input
-                id='title'
                 value={this.state.editInfoData.departure}
                 onChange={(e) => {
                   let { editInfoData } = this.state;
@@ -216,11 +341,70 @@ class InfoTable extends Component {
             <FormGroup>
               <Label for='title1'>Title</Label>
               <Input
-                id='title1'
                 value={this.state.editInfoData.destination}
                 onChange={(e) => {
                   let { editInfoData } = this.state;
                   editInfoData.destination = e.target.value;
+                  this.setState({ editInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                value={this.state.editInfoData.bus_type}
+                onChange={(e) => {
+                  let { editInfoData } = this.state;
+                  editInfoData.bus_type = e.target.value;
+                  this.setState({ editInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                value={this.state.editInfoData.bus_company}
+                onChange={(e) => {
+                  let { editInfoData } = this.state;
+                  editInfoData.bus_company = e.target.value;
+                  this.setState({ editInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                value={this.state.editInfoData.travel_date}
+                onChange={(e) => {
+                  let { editInfoData } = this.state;
+                  editInfoData.travel_date = e.target.value;
+                  this.setState({ editInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                value={this.state.editInfoData.travel_time}
+                onChange={(e) => {
+                  let { editInfoData } = this.state;
+                  editInfoData.travel_time = e.target.value;
+                  this.setState({ editInfoData });
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for='title1'>Title</Label>
+              <Input
+                value={this.state.editInfoData.price}
+                onChange={(e) => {
+                  let { editInfoData } = this.state;
+                  editInfoData.price = e.target.value;
                   this.setState({ editInfoData });
                 }}
               />
@@ -245,6 +429,11 @@ class InfoTable extends Component {
               <th>#</th>
               <th>First</th>
               <th>Last</th>
+              <th>Actions</th>
+              <th>First</th>
+              <th>Last</th>
+              <th>Actions</th>
+              <th>First</th>
               <th>Actions</th>
             </tr>
           </thead>
