@@ -1,0 +1,25 @@
+.form-auth {
+  margin: 0 auto;
+  max-width: 50vw;
+  padding: 50px 0;
+}
+
+.btns {
+  width: 100%;
+  color: #fff;
+  background: #dd4f05;
+}
+
+.btns:hover {
+  width: 100%;
+  color: #fff;
+  background: #b94507;
+}
+
+@media screen and (max-width: 600px) {
+  .form-auth {
+    margin: 0 auto;
+    min-width: 100vw;
+    padding: 25px 0;
+  }
+}

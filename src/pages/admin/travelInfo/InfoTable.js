@@ -1,5 +1,8 @@
 // import './App.css';
 import React, { Component } from "react";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 import {
   Button,
   Modal,
@@ -159,7 +162,7 @@ class InfoTable extends Component {
     let infos = this.state.infos.map((info) => {
       return (
         <tr key={info.id}>
-          <td>{info.id}</td>
+          {/* <td>{info.id}</td> */}
           <td>{info.departure}</td>
           <td>{info.destination}</td>
           <td>{info.bus_type}</td>
@@ -167,7 +170,7 @@ class InfoTable extends Component {
           <td>{info.travel_date}</td>
           <td>{info.travel_time}</td>
           <td>{info.price}</td>
-          <td>
+          <td colSpan={3}>
             <Button
               color='success'
               className='mr-2'
@@ -197,8 +200,20 @@ class InfoTable extends Component {
     });
 
     return (
+      <>
+      <Jumbotron fluid className='jumbotron text-white'>
+        <Container className='text-center'>
+          <h3>
+            <Link to='/' className='text-white'>
+              Home/
+            </Link>
+            Travel Information
+          </h3>
+          <p>Travel-with-benefits social service</p>
+        </Container>
+      </Jumbotron>
       <div className='container'>
-        <h1 className='mt-4'>Travel Information</h1>
+        {/* <h1 className='mt-4'>Travel Information</h1> */}
         <Button
           className='my-5'
           color='success'
@@ -215,7 +230,7 @@ class InfoTable extends Component {
           </ModalHeader>
           <ModalBody>
             <FormGroup>
-              <Label for='title'>Title</Label>
+              <Label for='title'>Departure</Label>
               <Input
                 id='title'
                 value={this.state.newInfoData.departure}
@@ -228,7 +243,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Destination</Label>
               <Input
                 id='title1'
                 value={this.state.newInfoData.destination}
@@ -241,7 +256,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Bus</Label>
               <Input
                 id='title1'
                 value={this.state.newInfoData.bus_type}
@@ -254,7 +269,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Company</Label>
               <Input
                 id='title1'
                 value={this.state.newInfoData.bus_company}
@@ -267,9 +282,10 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Travel Date</Label>
               <Input
                 id='title1'
+                type='Date'
                 value={this.state.newInfoData.travel_date}
                 onChange={(e) => {
                   let { newInfoData } = this.state;
@@ -280,7 +296,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Travel Time</Label>
               <Input
                 id='title1'
                 value={this.state.newInfoData.travel_time}
@@ -293,7 +309,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Price</Label>
               <Input
                 id='title1'
                 value={this.state.newInfoData.price}
@@ -327,7 +343,7 @@ class InfoTable extends Component {
           </ModalHeader>
           <ModalBody>
             <FormGroup>
-              <Label for='title'>Title</Label>
+              <Label for='title'>Departure</Label>
               <Input
                 value={this.state.editInfoData.departure}
                 onChange={(e) => {
@@ -339,7 +355,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Destination</Label>
               <Input
                 value={this.state.editInfoData.destination}
                 onChange={(e) => {
@@ -351,7 +367,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Bus</Label>
               <Input
                 value={this.state.editInfoData.bus_type}
                 onChange={(e) => {
@@ -363,7 +379,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Company</Label>
               <Input
                 value={this.state.editInfoData.bus_company}
                 onChange={(e) => {
@@ -375,8 +391,9 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Travel date</Label>
               <Input
+              type="Date"
                 value={this.state.editInfoData.travel_date}
                 onChange={(e) => {
                   let { editInfoData } = this.state;
@@ -387,7 +404,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Travel time</Label>
               <Input
                 value={this.state.editInfoData.travel_time}
                 onChange={(e) => {
@@ -399,7 +416,7 @@ class InfoTable extends Component {
             </FormGroup>
 
             <FormGroup>
-              <Label for='title1'>Title</Label>
+              <Label for='title1'>Price</Label>
               <Input
                 value={this.state.editInfoData.price}
                 onChange={(e) => {
@@ -426,7 +443,7 @@ class InfoTable extends Component {
         <Table className=''>
           <thead>
             <tr>
-              <th>#</th>
+              {/* <th>#</th> */}
               <th>First</th>
               <th>Last</th>
               <th>Actions</th>
@@ -434,12 +451,13 @@ class InfoTable extends Component {
               <th>Last</th>
               <th>Actions</th>
               <th>First</th>
-              <th>Actions</th>
+              <th colSpan={3}>Actions</th>
             </tr>
           </thead>
           <tbody>{infos}</tbody>
         </Table>
       </div>
+      </>
     );
   }
 }

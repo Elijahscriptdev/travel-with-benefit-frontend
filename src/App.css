@@ -50,6 +50,9 @@ body {
   background-color: #fff;
   color: #333;
 }
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: Rubik,sans-serif;
+}
 
 a {
   color: var(--primary-color);
@@ -252,4 +255,8 @@ img {
   height: 1px;
   background: #ccc;
   margin: 1.5rem 0;
+}
+
+.booking-info{
+  background: #F0F2F6;
 }

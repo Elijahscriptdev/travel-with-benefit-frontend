@@ -1,11 +1,12 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { setAlert } from "../../redux/actions/alert";
 import { login } from "../../redux/actions/auth";
+import "./auth.css";
 
-const Login = ({ login, isAuthenticated }) => {
+const Login = ({ login, isAuthenticated, setAlert }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -21,9 +22,11 @@ const Login = ({ login, isAuthenticated }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    console.log("form submitted");
-    login({ email, password });
+    if (password.length < 6) {
+      setAlert("Password cannot be less than 6", "danger");
+    } else {
+      login({ email, password });
+    }
   };
 
   // redirect if login
@@ -32,38 +35,45 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
+    <div className='booking-info py-3'>
       {/* <div className='alert alert-danger'>Invalid credentials</div> */}
-      <h1 className='large text-primary'>Sign In</h1>
+      {/* <h1 className='large text-primary'>Sign In</h1>
       <p className='lead'>
         <i className='fas fa-user'></i> Sign into Your Account
+      </p> */}
+      <div className='form-auth'>
+        <form className='form py-5' onSubmit={(e) => onSubmit(e)}>
+          <p className='lead'>
+            <i className='fas fa-user'></i> Sign into Your Account
+          </p>
+          <div className='form-group'>
+            <input
+              type='email'
+              value={email}
+              placeholder='eee@gmail.com'
+              name='email'
+              onChange={(e) => onChange(e)}
+            />
+          </div>
+          <div className='form-group'>
+            <input
+              type='password'
+              placeholder='*****************'
+              value={password}
+              name='password'
+              onChange={(e) => onChange(e)}
+              // minLength='6'
+            />
+          </div>
+          <div className='text-center'>
+          <input type='submit' className='btn btns'  value='Login' />
+          </div>
+          <p className='mt-2'>
+        Already have an account? <Link to='/register'>Sign Up</Link>
       </p>
-      <form className='form' onSubmit={(e) => onSubmit(e)}>
-        <div className='form-group'>
-          <input
-            type='email'
-            value={email}
-            placeholder='Email Address'
-            name='email'
-            onChange={(e) => onChange(e)}
-          />
-        </div>
-        <div className='form-group'>
-          <input
-            type='password'
-            placeholder='Password'
-            value={password}
-            name='password'
-            onChange={(e) => onChange(e)}
-            // minLength='6'
-          />
-        </div>
-        <input type='submit' className='btn btn-primary' value='Login' />
-      </form>
-      <p className='my-1'>
-        Don't have an account? <Link to='/register'>Sign Up</Link>
-      </p>
-    </Fragment>
+        </form>
+      </div>
+    </div>
   );
 };
 
