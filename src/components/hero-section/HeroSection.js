@@ -82,7 +82,7 @@ const HeroSection = () => {
             />
           </Col>
           <Col xs={12} md={3} className='text-center'>
-            <button className='btn text-white btn-form'>PROCEED</button>
+            <button className='btn text-white btn-form'>Let's go</button>
           </Col>
         </Form.Row>
       </Form>

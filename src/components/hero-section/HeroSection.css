@@ -7,7 +7,7 @@
   } */
 
 .hero-container {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605619633/dariusz-sankowski-3OiYMgDKJ6k-unsplash_ooc5zb.jpg")
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635638/Lagos-Header_czmfoh.jpg")
     center center/cover no-repeat;
   height: 100vh;
   width: 100%;
@@ -93,7 +93,7 @@
 
   .btn-form {
     width: 100% !important;
-    background: #fc8a10;
+    background: #dd4f05;
     margin-top: 15px;
   }
 
@@ -115,11 +115,11 @@
 
 .form p {
   font-weight: bold;
-  color: #fc8a10;
+  color: #dd4f05;
 }
 
 .btn-form {
   width: 100% !important;
-  background: #fc8a10;
+  background: #dd4f05;
   font-weight: 700;
 }

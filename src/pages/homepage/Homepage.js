@@ -91,73 +91,109 @@ function Homepage() {
         </Row>
       </Container>
 
-      <Container fluid className='places p-5'>
-        <div className='places-content text-white text-center m-4'>
-          <h3>Most Visited Places</h3>
+      <Container fluid className='place p-5'>
+        <div className='places-content text-center m-4'>
+          <h1>Most Visited Places</h1>
         </div>
         <Row>
-          <Col className='places-card' xs={12} md={3}>
+          <Col className='places-card' xs={12} md={4}>
             <Card>
               <Card.Img
                 variant='top'
                 src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813064/narciso-arellano-773s0MrPTMA-unsplash_sxmnmy.jpg'
               />
-              <Card.Body>
+              {/* <Card.Body>
                 <Card.Title>Lagos</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
+                <Button buttonStyle='btn--outline'>Go somewhere</Button>
+              </Card.Body> */}
             </Card>
+            <div className='bg-warning'>
+                  dddddddddddddddddd
+                  dddddddddddddddddd
+            </div>
           </Col>
-          <Col className='places-card' xs={12} md={3}>
+          <Col className='places-card' xs={12} md={4}>
             <Card>
               <Card.Img
                 variant='top'
                 src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813063/lynda-hinton-qUb4_r8Macg-unsplash_xwktky.jpg'
               />
-              <Card.Body>
+              {/* <Card.Body>
                 <Card.Title>Abuja</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
+                <Button buttonStyle='btn--outline'>Go somewhere</Button>
+              </Card.Body> */}
             </Card>
           </Col>
-          <Col className='places-card' xs={12} md={3}>
+          <Col className='places-card' xs={12} md={4}>
             <Card>
               <Card.Img
                 variant='top'
                 src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813472/fas-khan-fG_6H0URdos-unsplash_ykkp3y.jpg'
               />
-              <Card.Body>
+              {/* <Card.Body>
                 <Card.Title>Cross River</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
+                <Button buttonStyle='btn--outline'>Go somewhere</Button>
+              </Card.Body> */}
             </Card>
           </Col>
-          <Col className='places-card' xs={12} md={3}>
+          <Col className='places-card' xs={12} md={4}>
             <Card>
               <Card.Img
                 variant='top'
                 src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg'
               />
-              <Card.Body>
+              {/* <Card.Body>
                 <Card.Title>Asaba</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
+                <Button buttonStyle='btn--outline'>Go somewhere</Button>
+              </Card.Body> */}
+            </Card>
+          </Col>
+          <Col className='places-card' xs={12} md={4}>
+            <Card>
+              <Card.Img
+                variant='top'
+                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg'
+              />
+              {/* <Card.Body>
+                <Card.Title>Asaba</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <Button buttonStyle='btn--outline'>Go somewhere</Button>
+              </Card.Body> */}
+            </Card>
+          </Col>
+          <Col className='places-card' xs={12} md={4}>
+            <Card>
+              <Card.Img
+                variant='top'
+                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg'
+              />
+              {/* <Card.Body>
+                <Card.Title>Asaba</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <Button buttonStyle='btn--outline'>Go somewhere</Button>
+              </Card.Body> */}
             </Card>
           </Col>
         </Row>
