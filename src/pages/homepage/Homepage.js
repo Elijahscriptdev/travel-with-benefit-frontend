@@ -91,7 +91,7 @@ function Homepage() {
         </Row>
       </Container>
 
-      <Container fluid className='places p-5'>
+      <Container fluid className='places p-4'>
         <div className='places-content text-center m-4'>
           <h1>Most Visited Places</h1>
         </div>
@@ -282,30 +282,6 @@ function Homepage() {
               </div>
             </div>
           </Col>
-          {/* <Col className='places-card' xs={12} md={4}>
-            <Card>
-              <Card.Img
-                variant='top'
-                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg'
-              />
-            </Card>
-          </Col>
-          <Col className='places-card' xs={12} md={4}>
-            <Card>
-              <Card.Img
-                variant='top'
-                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg'
-              />
-            </Card>
-          </Col>
-          <Col className='places-card' xs={12} md={4}>
-            <Card>
-              <Card.Img
-                variant='top'
-                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg'
-              />
-            </Card>
-          </Col> */}
         </Row>
       </Container>
 

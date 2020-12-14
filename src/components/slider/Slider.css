@@ -91,24 +91,24 @@
 
 button.rec-dot {
   display: none !important;
-  /* background-color: #ff7f00;
+  /* background-color: #dd4f05;
   box-shadow: 0 0 1px 3px rgba(235, 16, 16, 0.5); */
 }
 
 button.rec-dot:hover,
 button.rec-dot:active,
 button.rec-dot:focus {
-  box-shadow: 0 0 1px 3px #ff7f00;
+  box-shadow: 0 0 1px 3px #dd4f05;
 }
 
 button.rec-arrow {
-  background-color: #ff7f00;
+  background-color: #dd4f05;
   color: #fff;
 }
 
 button.rec-arrow :hover,
 button.rec-arrow :active,
 button.rec-arrow :focus {
-  box-shadow: 0 0 1px 3px #ff7f00;
-  background-color: #c75b03 !important;
+  box-shadow: 0 0 1px 3px #dd4f05;
+  background-color: #dd4f05 !important;
 }

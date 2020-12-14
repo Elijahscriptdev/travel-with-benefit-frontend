@@ -42,7 +42,7 @@ p {
 
 .visited1 .card {
   position: relative;
-  background: #4242a5;
+  background: #dd4f05;
   /* top: -230px; */
   width: 80%;
   border-radius: 7px;
@@ -125,6 +125,7 @@ p {
 
 .show {
   color: #fff !important;
+  width: 100%;
 }
 
 .show li {
@@ -146,9 +147,9 @@ p {
 }
 
 .icon {
-  font-size: 60px;
+  font-size: 40px;
   color: #dd4f05;
-  margin: 25px;
+  margin: 20px;
 }
 
 .fa-star {
@@ -157,6 +158,6 @@ p {
 
 @media screen and (max-width: 500px) {
   .places-card {
-    margin: 20px;
+    /* margin: 20px; */
   }
 }
