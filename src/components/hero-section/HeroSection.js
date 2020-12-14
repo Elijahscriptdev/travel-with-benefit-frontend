@@ -89,13 +89,13 @@ const HeroSection = () => {
 
       <p> ...travel smart get benefits</p>
       <div className='hero-btns'>
-        <Button
+        {/* <Button
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
           BOOK NOW
-        </Button>
+        </Button> */}
         {/* <Button
           className='btns'
           buttonStyle='btn--primary'

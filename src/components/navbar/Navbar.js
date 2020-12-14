@@ -74,7 +74,7 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       </li>
       <li className='nav-items'>
         <Link
-          to='/bookings-listings'
+          to='/bus/listings'
           className='nav-links'
           onClick={closeMobileMenu}
         >
