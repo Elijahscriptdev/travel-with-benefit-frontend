@@ -93,7 +93,7 @@
 
   .btn-form {
     width: 100% !important;
-    background: #ff7f00;
+    background: #fc8a10;
     margin-top: 15px;
   }
 
@@ -107,7 +107,7 @@
 	rgba(24, 23, 23, 0.45), 
 	rgba(15, 6, 6, 0.45)
   ); */
-  background: #fff;
+  background: rgba(216, 216, 216, 0.46);
   padding: 20px 35px;
   margin: 30px;
   border-radius: 15px;
@@ -115,10 +115,11 @@
 
 .form p {
   font-weight: bold;
-  color: #ff7f00;
+  color: #fc8a10;
 }
 
 .btn-form {
   width: 100% !important;
-  background: #ff7f00;
+  background: #fc8a10;
+  font-weight: 700;
 }

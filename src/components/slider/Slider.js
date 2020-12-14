@@ -13,8 +13,8 @@ const breakPoints = [
 function Slider() {
   return (
     <div id='partner'>
-      <h1 style={{ textAlign: "center", margin: "15px" }}>Our Partners</h1>
-      <div className='App' >
+      {/* <h1 style={{ textAlign: "center", margin: "15px" }}>Our Partners</h1> */}
+      <div className='App'>
         <Carousel breakPoints={breakPoints}>
           <Item className='one'></Item>
           <Item className='two'></Item>

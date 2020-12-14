@@ -1,11 +1,12 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function Footer() {
   return (
     <div className='footer-container'>
-      {/* <section className='footer-subscription'>
+      <section className='footer-subscription text-white'>
         <p className='footer-subscription-heading'>
           Join the Adventure newsletter to receive our best vacation deals
         </p>
@@ -15,15 +16,15 @@ function Footer() {
         <div className='input-areas'>
           <form>
             <input
-              className='footer-input'
+              className='footer-input p-2'
               name='email'
               type='email'
               placeholder='Your Email'
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle='btn'>Subscribe</Button>
           </form>
         </div>
-      </section> */}
+      </section>
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
@@ -43,13 +44,13 @@ function Footer() {
           </div>
         </div>
         <div className='footer-link-wrapper'>
-          {/* <div className='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
             <Link to='/'>Ambassadors</Link>
             <Link to='/'>Agency</Link>
             <Link to='/'>Influencer</Link>
-          </div> */}
+          </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
             <Link to='/'>Instagram</Link>
