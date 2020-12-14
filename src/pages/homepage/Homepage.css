@@ -2,6 +2,30 @@
   margin: 60px auto !important;
 }
 
+h1,
+h5,
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #6d6b6b;
+}
+
+h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.notice {
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+p {
+  line-height: 25px;
+}
+
 .choose-us {
   margin: 60px auto 0px !important;
   background-color: #f1f1f1;

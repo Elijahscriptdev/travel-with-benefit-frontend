@@ -11,10 +11,10 @@ function Homepage() {
 
       <Container className='welcome'>
         <Row>
-          <Col xs={12} md={6} className='text-center m-auto'>
-            <h1>WELCOME TO TRAVEL</h1>
+          <Col xs={12} md={6} className='m-auto'>
+            <h1 className=''>TRAVEL WITH BENEFITS</h1>
             <p>
-              <span className='text-bold'>Travel-with-benefits.com</span> is a
+              <span className='notice'>Travel-with-benefits.com</span> is a
               transport retail service delivery that enables customers to buy
               tickets with benefits to enable them access to social services.
               Our service has been proven to be supportive to Nigerians
@@ -40,7 +40,9 @@ function Homepage() {
           <h1>WHY CHOOSE US</h1>
           <p>
             Providing customers-centric retail service delivery solutions for
+            <br />
             all road users that patronize Travel-with-benefits social service,
+            <br />
             through user-friendly technologic innovations and administrative
             benefits.
           </p>
@@ -161,8 +163,10 @@ function Homepage() {
         </Row>
       </Container>
 
+      <Slider />
+
       <Container className='testimony text-center'>
-        <h2>What they say about us ...</h2>
+        <h2 className='text-uppercase'>What they say about us ...</h2>
         <Row>
           <Col xs={12} md={4} className='my-3'>
             <div className='testimonial'>
@@ -220,8 +224,6 @@ function Homepage() {
           </Col>
         </Row>
       </Container>
-
-      <Slider />
     </div>
   );
 }

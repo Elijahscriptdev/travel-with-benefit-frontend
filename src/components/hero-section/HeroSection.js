@@ -54,11 +54,11 @@ const HeroSection = () => {
     <div className='hero-container'>
       {/* <video src="https://res.cloudinary.com/elijjaaahhhh/video/upload/v1607632664/Car_-_11490_ci8erh.mp4" loop autoplay="true" /> */}
       <Form className='form' onSubmit={(e) => onSubmit(e)}>
-        <p className=''>Search for available buses</p>
+        <p className='text-dark'>Search for available buses</p>
         <Form.Row>
           <Col className='input-form' xs={12} md={3}>
             <Form.Control
-              placeholder='From'
+              placeholder='Departure'
               value={departure}
               name='departure'
               onChange={(e) => onChange(e)}
@@ -66,7 +66,7 @@ const HeroSection = () => {
           </Col>
           <Col className='input-form' xs={12} md={3}>
             <Form.Control
-              placeholder='To'
+              placeholder='Destination'
               value={destination}
               name='destination'
               onChange={(e) => onChange(e)}
@@ -74,6 +74,7 @@ const HeroSection = () => {
           </Col>
           <Col className='input-form' xs={12} md={3}>
             <Form.Control
+              type='Date'
               placeholder='Date'
               value={travel_date}
               name='travel_date'
@@ -81,7 +82,7 @@ const HeroSection = () => {
             />
           </Col>
           <Col xs={12} md={3} className='text-center'>
-            <button className='btn btn-secondary btn-form'>PROCEED</button>
+            <button className='btn text-white btn-form'>PROCEED</button>
           </Col>
         </Form.Row>
       </Form>
