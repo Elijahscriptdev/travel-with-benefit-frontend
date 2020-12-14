@@ -23,7 +23,9 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import ConfirmBooking from "./components/booking/ConfirmBooking";
 import Payment from "./components/booking/Payment";
 import ListBookings from "./pages/admin/booking/ListBookings";
-import ListTravelInformation from "./pages/admin/travelInfo/ListTravelInformation";
+// import ListTravelInformation from "./pages/admin/travelInfo/ListTravelInformation";
+// import Info from "./pages/admin/travelInfo/Info";
+import InfoTable from "./pages/admin/travelInfo/InfoTable";
 
 function App() {
   // always make sure the user is authenticated if token in the localstorage is valid
@@ -40,7 +42,8 @@ function App() {
         <Switch>
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <Route exact path='/get-all-bookings' component={ListBookings} />
-          <Route exact path='/get-all-travel-information' component={ListTravelInformation} />
+          {/* <Route exact path='/get-all-travel-information' component={ListTravelInformation} /> */}
+          <Route exact path='/info' component={InfoTable} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route path='/contact-us' component={Contact} />
