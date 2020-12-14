@@ -18,12 +18,117 @@ h3 {
 }
 
 .notice {
-  color: #ff7f00;
+  color: #dd4f05;
   font-weight: bold;
 }
 
 p {
   line-height: 25px;
+}
+
+.places-card {
+  position: relative;
+}
+
+.visited .card {
+  position: relative;
+  bottom: 50px;
+  width: 80%;
+  border-radius: 7px;
+  padding: 15px 15px;
+  margin: 0 32px;
+  cursor: pointer;
+}
+
+.visited1 .card {
+  position: relative;
+  background: #4242a5;
+  /* top: -230px; */
+  width: 80%;
+  border-radius: 7px;
+  padding: 15px 15px;
+  margin: -230px 32px 0;
+  cursor: pointer;
+  z-index: 1;
+  color: #fff !important;
+}
+
+.card .location {
+  font-size: 12px;
+  color: #6d6b6b;
+}
+
+.card h5 {
+  font-size: 16px;
+  color: #dd4f05;
+  font-weight: 600;
+  margin: 3px 0;
+}
+
+.review {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.review i,
+.review span {
+  margin: 3px 3px;
+  color: #6d6b6b;
+}
+
+/* .card .hide{
+  font-size: 15px;
+  line-height: 16px;
+  margin: 0;
+  font-weight: 500;
+  display: none;
+} */
+
+.hide {
+  display: none;
+}
+
+.show {
+  cursor: pointer;
+}
+
+.visited:hover + .visited1 {
+  font-size: 15px;
+  line-height: 16px;
+  margin: 0 !important;
+  font-weight: 500;
+  display: block;
+}
+
+.card hr {
+  margin: 8px;
+}
+
+.card ul {
+  display: flex;
+  margin: 0;
+}
+
+.card ul li {
+  margin: 0 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6d6b6b;
+}
+
+.card .money {
+  position: relative;
+  color: #dd4f05;
+  font-weight: 800;
+}
+
+.show {
+  color: #fff !important;
+}
+
+.show li {
+  color: #fff !important;
 }
 
 .choose-us {
@@ -33,10 +138,7 @@ p {
 }
 
 .places {
-  margin: 0px auto 60px !important;
-  padding: 100px 50px !important;
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1603012689/zlmj4wkdirirqag7wo6y.jpg")
-    fixed;
+  background: #f9f8fe;
 }
 
 .testimony {
@@ -45,12 +147,12 @@ p {
 
 .icon {
   font-size: 60px;
-  color: #ff7f00;
+  color: #dd4f05;
   margin: 25px;
 }
 
 .fa-star {
-  color: #ff7f00;
+  color: #dd4f05;
 }
 
 @media screen and (max-width: 500px) {
