@@ -8,26 +8,21 @@ function AboutPage() {
     <>
       <Jumbotron fluid className='jumbotron text-white'>
         <Container className='text-center'>
-          <h4>
+          <h3>
             <Link to='/' className='text-white'>
               Home/
             </Link>
             About us
-          </h4>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
-          </p>
+          </h3>
+          <p>Travel-with-benefits social service</p>
         </Container>
       </Jumbotron>
       <Container className='welcome my-5'>
         <div className='about-title text-center m-5'>
-          <h2 className='text-uppercase'>
-            Probably the best place to book a ticket
-          </h2>
+          <h2 className='text-uppercase'>best place to book a ticket</h2>
         </div>
         <Row>
-          <Col xs={12} md={6} className='text-center m-auto'>
+          <Col xs={12} md={6} className='text-cente m-auto'>
             <h3></h3>
             <p>
               Travel-with-benefits.com is a transport retail service delivery
@@ -59,7 +54,7 @@ function AboutPage() {
         <Row>
           <Col xs={12} md={6}>
             <div className='our-services'>
-              <h3>Our Services</h3>
+              <h1>Our Services</h1>
               <p>
                 Providing customers-centric retail service delivery solutions
                 for all road users that patronize Travel-with-benefits social
