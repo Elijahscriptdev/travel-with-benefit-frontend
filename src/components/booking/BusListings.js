@@ -56,10 +56,10 @@ const BusListings = () => {
   };
 
   return (
-    <div className='background'>
-      <div className='container py'>
-        <h1>UPDATE SEARCH</h1>
-        <Form className='form my-3' onSubmit={(e) => handleSubmit(e)}>
+    <div className='background pt-1'>
+      <div className='container '>
+        <h1 className='text-center my'>UPDATE SEARCH</h1>
+        <Form className='form mb-5' onSubmit={(e) => handleSubmit(e)}>
           <p className=''>Search for available buses</p>
           <Form.Row>
             <Col className='input-form' xs={12} md={3}>
@@ -87,7 +87,7 @@ const BusListings = () => {
               />
             </Col>
             <Col xs={12} md={3} className='text-center'>
-              <button className='btn btn-secondary btn-form'>PROCEED</button>
+              <button className='btn btn-form text-white'>PROCEED</button>
             </Col>
           </Form.Row>
         </Form>
