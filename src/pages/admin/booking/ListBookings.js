@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Col, Form } from "react-bootstrap";
+import { Col, Container, Jumbotron, Row, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import BookingsTable from "./BookingsTable";
 import BookingSearchForm from "./BookingSearchForm";
@@ -24,8 +25,20 @@ const ListBookings = () => {
   };
 
   return (
-    <div className='containe p-3'>
-      <h1 className='my-5 text-center text-uppercase'>all bookings</h1>
+    <>
+      <Jumbotron fluid className='jumbotron text-white'>
+        <Container className='text-center'>
+          <h3>
+            <Link to='/' className='text-white'>
+              Home/
+            </Link>
+            All Bookings
+          </h3>
+          <p>Travel-with-benefits social service</p>
+        </Container>
+      </Jumbotron>
+    <div className='container'>
+      {/* <h1 className='my-5 text-center text-uppercase'>all bookings</h1> */}
       <div className='flex-row'>
         <div className='flex-large '>
           <BookingSearchForm />
@@ -34,7 +47,7 @@ const ListBookings = () => {
           <Form className='' onSubmit={(e) => handleSubmit(e)}>
             <Form.Row>
               <Col xs={4} md={3} className='text-center'>
-                <button className='btn btn-secondary btn-form'>
+                <button className='btn text-white btn-form'>
                   View All Bookings
                 </button>
               </Col>
@@ -45,6 +58,7 @@ const ListBookings = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

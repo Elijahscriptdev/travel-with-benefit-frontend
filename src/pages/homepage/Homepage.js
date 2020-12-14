@@ -14,7 +14,7 @@ function Homepage() {
           <Col xs={12} md={6} className='m-auto'>
             <h1 className=''>TRAVEL WITH BENEFITS</h1>
             <p>
-              <span className='notice'>Travel-with-benefits.com</span> is a
+              <span className='notice'>Travel with benefits</span> is a
               transport retail service delivery that enables customers to buy
               tickets with benefits to enable them access to social services.
               Our service has been proven to be supportive to Nigerians
@@ -27,7 +27,7 @@ function Homepage() {
           </Col>
           <Col xs={12} md={6}>
             <img
-              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607635639/cbf1416d52b34edbbfaf01b7adabc10e_r9a5wt.jpg'
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813472/fas-khan-fG_6H0URdos-unsplash_ykkp3y.jpg'
               alt='img'
               className='img-fluid'
             />
@@ -91,74 +91,196 @@ function Homepage() {
         </Row>
       </Container>
 
-      <Container fluid className='places p-5'>
-        <div className='places-content text-white text-center m-4'>
-          <h3>Most Visited Places</h3>
+      <Container fluid className='places p-4'>
+        <div className='places-content text-center m-4'>
+          <h1>Most Visited Places</h1>
         </div>
         <Row>
-          <Col className='places-card' xs={12} md={3}>
-            <Card>
+          <Col className='places-card' xs={12} md={4}>
+            <Card className='show'>
               <Card.Img
                 variant='top'
                 src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813064/narciso-arellano-773s0MrPTMA-unsplash_sxmnmy.jpg'
               />
-              <Card.Body>
-                <Card.Title>Lagos</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
             </Card>
+            <div className='visited'>
+              <div className='card'>
+                <span className='location'>
+                  <i className='fas fa-map-marker-alt'></i> Lagos, Nigeria
+                </span>
+                <h5>Victoria-Island Lagos, Nigeria</h5>
+                <div className='review'>
+                  <i className='far fa-smile'></i>
+                  <span>12</span>
+                  <span>Superb</span>
+                </div>
+                <p className='hide'>
+                  A wonderful little cottage right on the seashore - perfect for
+                  exploring.
+                </p>
+                <hr />
+                <ul className='list'>
+                  <li>
+                    <i className='far fa-clock'></i>7 Days
+                  </li>
+                  <li>
+                    <i className='far fa-user-friends'></i>65+
+                  </li>
+                  {/* <li className='money'>$2000</li> */}
+                </ul>
+              </div>
+            </div>
+            <div className='visited1 hide'>
+              <div className='card show'>
+                <span className='location show'>
+                  <i className='fas fa-map-marker-alt'></i> Lagos, Nigeria
+                </span>
+                <h5 className='show'>Victoria-Island Lagos, Nigeria</h5>
+                <div className='review show'>
+                  <i className='far fa-smile show'></i>
+                  <span className='show'>9</span>
+                  <span className='show'>Superb</span>
+                </div>
+                <p className='show'>
+                  A wonderful little cottage right on the seashore - perfect for
+                  exploring.
+                </p>
+                <hr />
+                <ul className='list show'>
+                  <li>
+                    <i className='far fa-clock'></i>7 Days
+                  </li>
+                  <li>
+                    <i className='far fa-user-friends'></i>65+
+                  </li>
+                  {/* <li className='money show'>$2000</li> */}
+                </ul>
+              </div>
+            </div>
           </Col>
-          <Col className='places-card' xs={12} md={3}>
+          <Col className='places-card' xs={12} md={4}>
             <Card>
               <Card.Img
                 variant='top'
                 src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813063/lynda-hinton-qUb4_r8Macg-unsplash_xwktky.jpg'
               />
-              <Card.Body>
-                <Card.Title>Abuja</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
             </Card>
+            <div className='visited'>
+              <div className='card'>
+                <span className='location'>
+                  <i className='fas fa-map-marker-alt'></i> Abuja, Nigeria
+                </span>
+                <h5>Wuse II Abuja, Nigeria</h5>
+                <div className='review'>
+                  <i className='far fa-smile'></i>
+                  <span>9</span>
+                  <span>Superb</span>
+                </div>
+                <p className='hide'>
+                  A wonderful little cottage right on the seashore - perfect for
+                  exploring.
+                </p>
+                <hr />
+                <ul className='list'>
+                  <li>
+                    <i className='far fa-clock'></i>7 Days
+                  </li>
+                  <li>
+                    <i className='far fa-user-friends'></i>65+
+                  </li>
+                  {/* <li className='money'>$2000</li> */}
+                </ul>
+              </div>
+            </div>
+            <div className='visited1 hide'>
+              <div className='card show'>
+                <span className='location show'>
+                  <i className='fas fa-map-marker-alt'></i> Abuja, Nigeria
+                </span>
+                <h5 className='show'>Wuse II Abuja, Nigeria</h5>
+                <div className='review show'>
+                  <i className='far fa-smile show'></i>
+                  <span className='show'>9</span>
+                  <span className='show'>Superb</span>
+                </div>
+                <p className='show'>
+                  A wonderful little cottage right on the seashore - perfect for
+                  exploring.
+                </p>
+                <hr />
+                <ul className='list show'>
+                  <li>
+                    <i className='far fa-clock'></i>7 Days
+                  </li>
+                  <li>
+                    <i className='far fa-user-friends'></i>65+
+                  </li>
+                  {/* <li className='money show'>$2000</li> */}
+                </ul>
+              </div>
+            </div>
           </Col>
-          <Col className='places-card' xs={12} md={3}>
+          <Col className='places-card' xs={12} md={4}>
             <Card>
               <Card.Img
                 variant='top'
                 src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813472/fas-khan-fG_6H0URdos-unsplash_ykkp3y.jpg'
               />
-              <Card.Body>
-                <Card.Title>Cross River</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
             </Card>
-          </Col>
-          <Col className='places-card' xs={12} md={3}>
-            <Card>
-              <Card.Img
-                variant='top'
-                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813060/cedric-blondeau-n9-fnypa6U0-unsplash_h8oila.jpg'
-              />
-              <Card.Body>
-                <Card.Title>Asaba</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                {/* <Button buttonStyle='btn--outline'>Go somewhere</Button> */}
-              </Card.Body>
-            </Card>
+            <div className='visited'>
+              <div className='card'>
+                <span className='location'>
+                  <i className='fas fa-map-marker-alt'></i> Cross-River, Nigeria
+                </span>
+                <h5>Cross-River, Nigeria</h5>
+                <div className='review'>
+                  <i className='far fa-smile'></i>
+                  <span>9</span>
+                  <span>Superb</span>
+                </div>
+                <p className='hide'>
+                  A wonderful little cottage right on the seashore - perfect for
+                  exploring.
+                </p>
+                <hr />
+                <ul className='list'>
+                  <li>
+                    <i className='far fa-clock'></i>7 Days
+                  </li>
+                  <li>
+                    <i className='far fa-user-friends'></i>65+
+                  </li>
+                  {/* <li className='money'>$2000</li> */}
+                </ul>
+              </div>
+            </div>
+            <div className='visited1 hide'>
+              <div className='card show'>
+                <span className='location show'>
+                  <i className='fas fa-map-marker-alt'></i> Cross-River, Nigeria
+                </span>
+                <h5 className='show'>Cross-River, Nigeria</h5>
+                <div className='review show'>
+                  <i className='far fa-smile show'></i>
+                  <span className='show'>9</span>
+                  <span className='show'>Superb</span>
+                </div>
+                <p className='show'>
+                  A wonderful little cottage right on the seashore - perfect for
+                  exploring.
+                </p>
+                <hr />
+                <ul className='list show'>
+                  <li>
+                    <i className='far fa-clock'></i>7 Days
+                  </li>
+                  <li>
+                    <i className='far fa-user-friends'></i>65+
+                  </li>
+                  {/* <li className='money show'>$2000</li> */}
+                </ul>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
@@ -176,7 +298,6 @@ function Homepage() {
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
-                {/* <i className='fas fa-star'></i> */}
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
@@ -212,7 +333,6 @@ function Homepage() {
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
-                {/* <i className='fas fa-star'></i> */}
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque

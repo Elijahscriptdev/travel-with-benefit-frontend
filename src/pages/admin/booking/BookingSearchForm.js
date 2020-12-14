@@ -39,7 +39,7 @@ const BookingSearchForm = () => {
   };
 
   return (
-    <div className='px-3'>
+    <div className='px-3 my-3'>
       <Form className='' onSubmit={(e) => handleClick(e)}>
         <Form.Row>
           <Col className='input-form' xs={9} md={5}>
@@ -51,7 +51,7 @@ const BookingSearchForm = () => {
             />
           </Col>
           <Col xs={4} md={3} className='text-center'>
-            <button className='btn btn-secondary btn-form'>search</button>
+            <button className='btn text-white btn-form'>search</button>
           </Col>
         </Form.Row>
       </Form>

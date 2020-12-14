@@ -7,7 +7,7 @@
   } */
 
 .hero-container {
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605619633/dariusz-sankowski-3OiYMgDKJ6k-unsplash_ooc5zb.jpg")
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1607953390/couple-1030744_1920_g3tmkv.jpg")
     center center/cover no-repeat;
   height: 100vh;
   width: 100%;
@@ -46,6 +46,10 @@
 }
 
 @media screen and (max-width: 960px) {
+  .hero-container {
+    height: 90vh;
+  }
+
   .hero-container > h1 {
     font-size: 70px;
     /* margin-top: -150px; */
@@ -53,6 +57,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .hero-container {
+    height: 70vh;
+  }
+
   .hero-container > h1 {
     font-size: 50px;
     /* margin-top: -100px; */
@@ -73,6 +81,10 @@
 }
 
 @media screen and (max-width: 500px) {
+  .hero-container {
+    height: 50vh;
+  }
+
   .hero-container > h1 {
     font-size: 35px;
     /* margin-top: -50px; */
@@ -93,7 +105,7 @@
 
   .btn-form {
     width: 100% !important;
-    background: #fc8a10;
+    background: #dd4f05;
     margin-top: 15px;
   }
 
@@ -115,11 +127,11 @@
 
 .form p {
   font-weight: bold;
-  color: #fc8a10;
+  color: #dd4f05;
 }
 
 .btn-form {
   width: 100% !important;
-  background: #fc8a10;
+  background: #dd4f05;
   font-weight: 700;
 }
