@@ -94,7 +94,7 @@ const BusListings = () => {
         </Form>
 
         <h1 className='text-bold'>RESULT OF SEARCH</h1>
-        {info.map((data, index) => (
+        {info && info.map((data, index) => (
           <RenderForm data={data} key={index} />
         ))}
       </div>
