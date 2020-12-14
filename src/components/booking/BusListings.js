@@ -80,6 +80,7 @@ const BusListings = () => {
             </Col>
             <Col className='input-form' xs={12} md={3}>
               <Form.Control
+                type='Date'
                 placeholder='Date'
                 value={travel_date}
                 name='travel_date'
