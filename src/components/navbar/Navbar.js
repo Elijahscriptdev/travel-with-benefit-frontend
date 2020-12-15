@@ -100,7 +100,12 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRAVEL <i className='fas fa-bus-alt'></i>
+            {/* TRAVEL <i className='fas fa-bus-alt'></i> */}
+            <img
+              className='img-fluid'
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1608034765/traVel-01kl_ho3o0d.jpg'
+              alt='img'
+            />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
