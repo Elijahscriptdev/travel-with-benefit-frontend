@@ -3,6 +3,7 @@ import HeroSection from "../../components/hero-section/HeroSection";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Homepage.css";
 import Slider from "../../components/slider/Slider";
+import TestimonySlider from "../../components/testimony/TestimonySlider";
 
 function Homepage() {
   return (
@@ -287,7 +288,9 @@ function Homepage() {
 
       <Slider />
 
-      <Container className='testimony text-center'>
+      <TestimonySlider />
+
+      {/* <Container className='testimony text-center'>
         <h2 className='text-uppercase'>What they say about us ...</h2>
         <Row>
           <Col xs={12} md={4} className='my-3'>
@@ -328,7 +331,7 @@ function Homepage() {
             </div>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </div>
   );
 }
