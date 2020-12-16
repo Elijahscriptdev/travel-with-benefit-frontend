@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { Toast, ToastBody, ToastHeader } from "reactstrap";
 
 const BookingInfo = () => {
   const data = JSON.parse(localStorage.getItem("info"));
@@ -33,7 +34,7 @@ const BookingInfo = () => {
     travel_time,
     price,
     seats,
-    total_price = seats * price,
+    total_price = seats * price + 1500,
   } = formData;
 
   const onChange = (e) =>
@@ -61,7 +62,7 @@ const BookingInfo = () => {
       travel_date,
       travel_time,
       price,
-      total_price: seats * price,
+      total_price: seats * price + 1500,
       seats,
     });
 
@@ -81,6 +82,11 @@ const BookingInfo = () => {
 
   return (
     <div className='booking-info py-5'>
+      <div className='texts'>
+        <Toast>
+          <ToastHeader className='text-right'>Additional #1500 fee</ToastHeader>
+        </Toast>
+      </div>
       <div className='container'>
         <h1>Confirm Your Booking</h1>
 
@@ -94,6 +100,7 @@ const BookingInfo = () => {
                 value={first_name}
                 name='first_name'
                 onChange={(e) => onChange(e)}
+                required
               />
             </div>
             <div className='form-group col-md-4'>
@@ -104,6 +111,7 @@ const BookingInfo = () => {
                 value={last_name}
                 name='last_name'
                 onChange={(e) => onChange(e)}
+                required
               />
             </div>
             <div className='form-group col-md-4'>
@@ -114,6 +122,7 @@ const BookingInfo = () => {
                 value={email}
                 name='email'
                 onChange={(e) => onChange(e)}
+                required
               />
             </div>
           </div>
@@ -212,7 +221,7 @@ const BookingInfo = () => {
               <input
                 type='text'
                 className='form-control'
-                value={seats * price}
+                value={seats * price + 1500}
                 name='total_price'
                 onChange={(e) => onChange(e)}
               />
