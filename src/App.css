@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", sans-serif;
 }
 
 /* Forms */
@@ -43,15 +42,23 @@ button {
   padding: 0;
 }
 
-body {
+/* body {
   font-family: "Work Sans", sans-serif !important;
   font-size: 1rem;
-  /* line-height: 1.6; */
+  line-height: 1.6;
   background-color: #fff;
   color: #333;
-}
-body, h1, h2, h3, h4, h5, h6 {
-  font-family: Rubik,sans-serif;
+} */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif !important;
 }
 
 a {
@@ -257,6 +264,6 @@ img {
   margin: 1.5rem 0;
 }
 
-.booking-info{
-  background: #F0F2F6;
+.booking-info {
+  background: #f0f2f6;
 }
