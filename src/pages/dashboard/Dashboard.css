@@ -1,11 +1,12 @@
-.dash-info {
+.contain {
   background: #f0f2f6;
+  padding: 10px;
 }
 
-.dash-info form {
+.contain form {
   background: none;
 }
 
 .dash-info table {
-  font-size: 11px;
+  font-size: 12px;
 }
