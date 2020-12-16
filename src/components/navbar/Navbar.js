@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // import { Button } from "../button/Button";
 import "./Navbar.css";
 
-function Navbar({ auth: { isAuthenticated, loading }, logout }) {
+function Navbar({ auth: { isAuthenticated, loading, admin }, logout }) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -32,6 +32,26 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
           Our Partners
         </a>
       </li>
+      {admin && (
+        <>
+          <li className='nav-items'>
+            <Link
+              to='/get-all-bookings'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Bookings
+            </Link>
+          </li>
+
+          <li className='nav-items'>
+            <Link to='/info' className='nav-links' onClick={closeMobileMenu}>
+              Travel Info
+            </Link>
+          </li>
+        </>
+      )}
+
       <li className='nav-items'>
         <Link
           to='/bus/listings'
