@@ -3,6 +3,7 @@ import HeroSection from "../../components/hero-section/HeroSection";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Homepage.css";
 import Slider from "../../components/slider/Slider";
+import TestimonySlider from "../../components/testimony/TestimonySlider";
 
 function Homepage() {
   return (
@@ -43,7 +44,7 @@ function Homepage() {
             <br />
             all road users that patronize Travel-with-benefits social service,
             <br />
-            through user-friendly technologic innovations and administrative
+            through user-friendly technological innovations and administrative
             benefits.
           </p>
         </div>
@@ -287,29 +288,26 @@ function Homepage() {
 
       <Slider />
 
-      <Container className='testimony text-center'>
+      <TestimonySlider />
+
+      {/* <Container className='testimony text-center'>
         <h2 className='text-uppercase'>What they say about us ...</h2>
         <Row>
           <Col xs={12} md={4} className='my-3'>
             <div className='testimonial'>
-              <div className='name my-2'>John Waddrob</div>
+              <div className='name my-2'>Tosan</div>
               <div className='stars'>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                repellat aspernatur temporibus assumenda sint odio minima.
-                Voluptate alias possimus aspernatur voluptates excepturi placeat
-                iusto cupiditate.
-              </p>
+              <p>Easily get all your previous bookings when logged in.</p>
             </div>
           </Col>
           <Col xs={12} md={4} className='my-3'>
             <div className='testimonial'>
-              <div className='name my-2'>John Waddrob</div>
+              <div className='name my-2'>John </div>
               <div className='stars'>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
@@ -317,33 +315,23 @@ function Homepage() {
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                repellat aspernatur temporibus assumenda sint odio minima.
-                Voluptate alias possimus aspernatur voluptates excepturi placeat
-                iusto cupiditate.
-              </p>
+              <p>Got my desired sitting position of my choice</p>
             </div>
           </Col>
           <Col xs={12} md={4} className='my-3'>
             <div className='testimonial'>
-              <div className='name my-2'>John Waddrob</div>
+              <div className='name my-2'>Funmi</div>
               <div className='stars'>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
                 <i className='fas fa-star'></i>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                repellat aspernatur temporibus assumenda sint odio minima.
-                Voluptate alias possimus aspernatur voluptates excepturi placeat
-                iusto cupiditate.
-              </p>
+              <p>Smooth payment process integration paystack</p>
             </div>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.contain {
+  background: #f0f2f6;
+  padding: 10px;
+}
+
+.contain form {
+  background: none;
+}
+
+.dash-info table {
+  font-size: 12px;
+}

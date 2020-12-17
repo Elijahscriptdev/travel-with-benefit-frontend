@@ -160,4 +160,26 @@ p {
   .places-card {
     /* margin: 20px; */
   }
+
+  .testimonials h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.slider {
+  height: 150px !important;
+  margin: 5px 0;
+}
+
+.slider a.previousButton,
+.slider a.nextButton {
+  display: none !important;
+}
+
+.testimonials {
+  padding: 40px 10px 0;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
 }
