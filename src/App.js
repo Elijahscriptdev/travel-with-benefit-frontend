@@ -41,8 +41,8 @@ function App() {
         <Route path='/' exact component={Homepage} />
         <Switch>
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
-          <PrivateRoute exact path='/get-all-bookings' component={ListBookings} />
-          <PrivateRoute exact path='/info' component={InfoTable} />
+          <PrivateRoute exact path='/get-all-bookings' component={ListBookings} admin />
+          <PrivateRoute exact path='/info' component={InfoTable} admin />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route path='/contact-us' component={Contact} />

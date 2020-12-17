@@ -53,8 +53,10 @@ function Footer() {
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
+            <a href='https://www.instagram.com/tvwithbenefits'>Instagram</a>
+            <a href='https://web.facebook.com/tvwithbenefits?_rdc=1&_rdr'>
+              Facebook
+            </a>
             <Link to='/'>Youtube</Link>
             <Link to='/'>Twitter</Link>
           </div>
@@ -64,28 +66,28 @@ function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
-              TRAVEL
-              <i className='fas fa-bus-alt'></i>
+              TWB
+              {/* <i className='fas fa-bus-alt'></i> */}
             </Link>
           </div>
           <small className='website-rights'>TRAVEL © 2020</small>
           <div className='social-icons'>
-            <Link
+            <a
               className='social-icon-link facebook'
-              to='/'
+              href='https://web.facebook.com/tvwithbenefits?_rdc=1&_rdr'
               target='_blank'
               aria-label='Facebook'
             >
               <i className='fab fa-facebook-f' />
-            </Link>
-            <Link
+            </a>
+            <a
               className='social-icon-link instagram'
-              to='/'
+              href='https://www.instagram.com/tvwithbenefits'
               target='_blank'
               aria-label='Instagram'
             >
               <i className='fab fa-instagram' />
-            </Link>
+            </a>
             <Link
               className='social-icon-link youtube'
               to='/'

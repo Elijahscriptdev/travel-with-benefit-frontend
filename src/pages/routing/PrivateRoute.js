@@ -5,20 +5,19 @@ import { Redirect, Route } from "react-router-dom";
 
 const PrivateRoute = ({
   component: Component,
-  auth: { isAuthenticated, loading },
+  auth: { isAuthenticated, admin },
   ...rest
-}) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      !isAuthenticated && !loading ? (
-        <Redirect to='/login' />
-      ) : (
-        <Component {...props} />
-      )
-    }
-  />
-);
+}) => {
+  if (isAuthenticated && !admin) {
+    return <Redirect to='/' />;
+  }
+
+  if (!isAuthenticated) {
+    return <Redirect to='/login' />;
+  }
+
+  return <Route {...rest} render={(props) => <Component {...props} />} />;
+};
 
 PrivateRoute.propTypes = {
   auth: PropTypes.object.isRequired,
@@ -29,3 +28,8 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(PrivateRoute);
+// !isAuthenticated && !loading ? (
+//   <Redirect to='/login' />
+// ) : (
+//   <Component {...props} />
+// )

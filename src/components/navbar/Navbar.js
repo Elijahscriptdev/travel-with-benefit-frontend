@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // import { Button } from "../button/Button";
 import "./Navbar.css";
 
-function Navbar({ auth: { isAuthenticated, loading }, logout }) {
+function Navbar({ auth: { isAuthenticated, loading, admin }, logout }) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -32,9 +32,29 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
           Our Partners
         </a>
       </li>
+      {admin && (
+        <>
+          <li className='nav-items'>
+            <Link
+              to='/get-all-bookings'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Bookings
+            </Link>
+          </li>
+
+          <li className='nav-items'>
+            <Link to='/info' className='nav-links' onClick={closeMobileMenu}>
+              Travel Info
+            </Link>
+          </li>
+        </>
+      )}
+
       <li className='nav-items'>
         <Link
-          to='/bookings-listings'
+          to='/bus/listings'
           className='nav-links'
           onClick={closeMobileMenu}
         >
@@ -100,7 +120,12 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRAVEL <i className='fas fa-bus-alt'></i>
+            {/* TRAVEL <i className='fas fa-bus-alt'></i> */}
+            <img
+              className='img-fluid'
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1608034765/traVel-01kl_ho3o0d.jpg'
+              alt='img'
+            />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
