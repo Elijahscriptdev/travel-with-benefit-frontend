@@ -116,7 +116,7 @@ function Navbar({ auth: { isAuthenticated, loading, admin }, logout }) {
   );
 
   return (
-    <>
+    <div className="nav-bar">
       <nav className='navbar'>
         <div className='navbar-container'>
           <div className='navbar-logo'>
@@ -146,7 +146,7 @@ function Navbar({ auth: { isAuthenticated, loading, admin }, logout }) {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 
