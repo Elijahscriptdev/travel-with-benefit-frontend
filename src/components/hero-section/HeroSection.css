@@ -62,7 +62,7 @@
 .form-body {
   padding: 40px;
   height: 190px;
-  width: 960px;
+  max-width: 960px;
   background: rgba(255, 255, 255, 0.164);
   backdrop-filter: blur(3px);
   border-radius: 5px;
@@ -184,16 +184,16 @@
   }
 } */
 
-.form {
-  /* background: linear-gradient(
+/* .form {
+  background: linear-gradient(
 	rgba(24, 23, 23, 0.45), 
 	rgba(15, 6, 6, 0.45)
-  ); */
-  /* background: rgba(216, 216, 216, 0.46);
+  );
+  background: rgba(216, 216, 216, 0.46);
   padding: 20px 35px;
   margin: 30px;
-  border-radius: 15px; */
-}
+  border-radius: 15px;
+} */
 
 /* .form p {
   font-weight: bold;

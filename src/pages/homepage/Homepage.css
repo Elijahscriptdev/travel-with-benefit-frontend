@@ -1,4 +1,53 @@
-.welcome {
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  padding: 120px 20px;
+}
+
+.intro-one {
+  height: 300px;
+}
+
+.intro-one h1 {
+  font-family: Cardo;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 40px;
+  color: #12182c;
+}
+
+.intro-one p {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: justified;
+  color: #a0a3bd;
+}
+
+.intro-img {
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+}
+
+.intro-img .img-one {
+  margin-top: 20px;
+}
+
+.intro-img .img-two {
+  margin-top: 220px;
+}
+
+/* .welcome {
   margin: 60px auto !important;
 }
 
@@ -43,7 +92,7 @@ p {
 .visited1 .card {
   position: relative;
   background: #dd4f05;
-  /* top: -230px; */
+  top: -230px;
   width: 80%;
   border-radius: 7px;
   padding: 15px 15px;
@@ -75,7 +124,7 @@ p {
 .review span {
   margin: 3px 3px;
   color: #6d6b6b;
-}
+} */
 
 /* .card .hide{
   font-size: 15px;
@@ -85,7 +134,7 @@ p {
   display: none;
 } */
 
-.hide {
+/* .hide {
   display: none;
 }
 
@@ -157,9 +206,7 @@ p {
 }
 
 @media screen and (max-width: 500px) {
-  .places-card {
-    /* margin: 20px; */
-  }
+
 
   .testimonials h2 {
     font-size: 1.5rem;
@@ -182,4 +229,4 @@ p {
 
 .testimonials h2 {
   font-size: 2rem;
-}
+} */
