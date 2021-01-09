@@ -9,7 +9,7 @@ function Homepage() {
   return (
     <div>
       <HeroSection />
-      
+
       <section className='container intro'>
         <div className='intro-one'>
           <h1 className='intron-one-heading'>Travel With Benefits</h1>
@@ -40,8 +40,82 @@ function Homepage() {
         </div>
       </section>
 
-      <section>
+      <section className='container choose-us'>
+        <div className='choose-us-title'>
+          <h1>Why Choose Us</h1>
+        </div>
 
+        <div className='choose-us-one'>
+          <div className='col-one'>
+            <div className='col-one-title text-right'>
+              <h1>01</h1>
+            </div>
+            <div className='col-one-body'>
+              <h5>
+                <hr className='line' /> DIVERSE DESTINATION
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                deleniti voluptatem consequuntur suscipit nulla neque dolores
+                quo natus deserunt officiis.
+              </p>
+            </div>
+          </div>
+          <div className='col-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610143034/3_n0mmj2.png'
+              alt='img'
+            />
+          </div>
+        </div>
+
+        <div className='choose-us-one'>
+          <div className='col-two-right'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610143034/3_n0mmj2.png'
+              alt='img'
+            />
+          </div>
+          <div className='col-one-right'>
+            <div className='col-one-title text-left'>
+              <h1>02</h1>
+            </div>
+            <div className='col-one-body'>
+              <h5>
+                <hr className='line' /> VALUE FOR MONEY
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                deleniti voluptatem consequuntur suscipit nulla neque dolores
+                quo natus deserunt officiis.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className='choose-us-one'>
+          <div className='col-one'>
+            <div className='col-one-title text-right'>
+              <h1>03</h1>
+            </div>
+            <div className='col-one-body'>
+              <h5>
+                <hr className='line' /> TRAVEL COMFORT
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                deleniti voluptatem consequuntur suscipit nulla neque dolores
+                quo natus deserunt officiis.
+              </p>
+            </div>
+          </div>
+          <div className='col-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610143034/3_n0mmj2.png'
+              alt='img'
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
