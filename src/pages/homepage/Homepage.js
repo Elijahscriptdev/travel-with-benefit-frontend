@@ -1,9 +1,6 @@
 import React from "react";
 import HeroSection from "../../components/hero-section/HeroSection";
-// import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Homepage.css";
-// import Slider from "../../components/slider/Slider";
-// import TestimonySlider from "../../components/testimony/TestimonySlider";
 
 function Homepage() {
   return (
@@ -72,7 +69,7 @@ function Homepage() {
         <div className='choose-us-one'>
           <div className='col-two-right'>
             <img
-              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610143034/3_n0mmj2.png'
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/2_hy5zvu.png'
               alt='img'
             />
           </div>
@@ -111,7 +108,7 @@ function Homepage() {
           </div>
           <div className='col-two'>
             <img
-              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610143034/3_n0mmj2.png'
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/01_p6uyju.png'
               alt='img'
             />
           </div>
@@ -163,6 +160,39 @@ function Homepage() {
               {/* <i class="fal fa-map-marker-alt"></i> */}
               <h5>Ibadan, Niheria</h5>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='container partners'>
+        <div className='partners-title'>
+          <h1>Our Partners</h1>
+        </div>
+
+        <div className='partners-container'>
+          <div className='partner'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/Vector_t5hghd.png'
+              alt='img'
+            />
+          </div>
+          <div className='partner-three'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/Vector_1_xrsjeu.png'
+              alt='img'
+            />
+          </div>
+          <div className='partner-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/svgg_1_lcujgm.png'
+              alt='img'
+            />
+          </div>
+          <div className='partner-one'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/svgg_d6n4hm.png'
+              alt='img'
+            />
           </div>
         </div>
       </section>
