@@ -1,337 +1,289 @@
 import React from "react";
 import HeroSection from "../../components/hero-section/HeroSection";
-import { Container, Row, Col, Card } from "react-bootstrap";
 import "./Homepage.css";
-import Slider from "../../components/slider/Slider";
-import TestimonySlider from "../../components/testimony/TestimonySlider";
 
 function Homepage() {
   return (
     <div>
       <HeroSection />
 
-      <Container className='welcome'>
-        <Row>
-          <Col xs={12} md={6} className='m-auto'>
-            <h1 className=''>TRAVEL WITH BENEFITS</h1>
-            <p>
-              <span className='notice'>Travel with benefits</span> is a
-              transport retail service delivery that enables customers to buy
-              tickets with benefits to enable them access to social services.
-              Our service has been proven to be supportive to Nigerians
-              travelling across the country by road. The benefit of our social
-              retail services enable individuals to have access to various
-              Travel-with-benefits retail service benefits each time they travel
-              with our transport companies listed above with a zero account
-              balance any time, anywhere.
-            </p>
-          </Col>
-          <Col xs={12} md={6}>
-            <img
-              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813472/fas-khan-fG_6H0URdos-unsplash_ykkp3y.jpg'
-              alt='img'
-              className='img-fluid'
-            />
-          </Col>
-        </Row>
-      </Container>
-
-      <Container fluid className='choose-us'>
-        <div className=' text-center'>
-          <h1>WHY CHOOSE US</h1>
+      <section className='container intro'>
+        <div className='intro-one'>
+          <h1 className='intron-one-heading'>Travel With Benefits</h1>
           <p>
-            Providing customers-centric retail service delivery solutions for
-            <br />
-            all road users that patronize Travel-with-benefits social service,
-            <br />
-            through user-friendly technological innovations and administrative
-            benefits.
+            Travel with benefits is a transport retail service delivery that
+            enables customers to buy tickets with benefits to enable them access
+            to social services. Our service has been proven to be supportive to
+            Nigerians travelling across the country by road. The benefit of our
+            social retail services enable individuals to have access to various
+            Travel-with-benefits retail service benefits each time they travel
+            with our transport companies listed above with a zero account
+            balance any time, anywhere.
           </p>
         </div>
-        <Row>
-          <Col xs={12} md={3}>
-            <div className='choose-us-content text-center'>
-              <i className='fas icon fa-map-marker-alt'></i>
-              <h5>Diverse Destinations</h5>
-              <p>
-                orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod.
-              </p>
-            </div>
-          </Col>
-          <Col xs={12} md={3}>
-            <div className='choose-us-content text-center'>
-              <i className='fas icon fa-money-check'></i>
-              <h5>Value for Money</h5>
-              <p>
-                orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod.
-              </p>
-            </div>
-          </Col>
-          <Col xs={12} md={3}>
-            <div className='choose-us-content text-center'>
-              <i className='fas icon fa-globe-africa'></i>
-              <h5>Beautiful Places</h5>
-              <p>
-                orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod.
-              </p>
-            </div>
-          </Col>
-          <Col xs={12} md={3}>
-            <div className='choose-us-content text-center'>
-              <i className='fas icon fa-location-arrow'></i>
-              <h5>Passionate Travel</h5>
-              <p>
-                orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod.
-              </p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-
-      <Container fluid className='places p-4'>
-        <div className='places-content text-center m-4'>
-          <h1>Most Visited Places</h1>
+        <div className='intro-img'>
+          <div className='img-one'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610141425/Rectangle_13_rcacba.png'
+              alt='img'
+            />
+          </div>
+          <div className='img-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610141425/Rectangle_14_o3ftg8.png'
+              alt='img'
+            />
+          </div>
         </div>
-        <Row>
-          <Col className='places-card' xs={12} md={4}>
-            <Card className='show'>
-              <Card.Img
-                variant='top'
-                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813064/narciso-arellano-773s0MrPTMA-unsplash_sxmnmy.jpg'
-              />
-            </Card>
-            <div className='visited'>
-              <div className='card'>
-                <span className='location'>
-                  <i className='fas fa-map-marker-alt'></i> Lagos, Nigeria
-                </span>
-                <h5>Victoria-Island Lagos, Nigeria</h5>
-                <div className='review'>
-                  <i className='far fa-smile'></i>
-                  <span>12</span>
-                  <span>Superb</span>
-                </div>
-                <p className='hide'>
-                  A wonderful little cottage right on the seashore - perfect for
-                  exploring.
-                </p>
-                <hr />
-                <ul className='list'>
-                  <li>
-                    <i className='far fa-clock'></i>7 Days
-                  </li>
-                  <li>
-                    <i className='far fa-user-friends'></i>65+
-                  </li>
-                  {/* <li className='money'>$2000</li> */}
-                </ul>
-              </div>
-            </div>
-            <div className='visited1 hide'>
-              <div className='card show'>
-                <span className='location show'>
-                  <i className='fas fa-map-marker-alt'></i> Lagos, Nigeria
-                </span>
-                <h5 className='show'>Victoria-Island Lagos, Nigeria</h5>
-                <div className='review show'>
-                  <i className='far fa-smile show'></i>
-                  <span className='show'>9</span>
-                  <span className='show'>Superb</span>
-                </div>
-                <p className='show'>
-                  A wonderful little cottage right on the seashore - perfect for
-                  exploring.
-                </p>
-                <hr />
-                <ul className='list show'>
-                  <li>
-                    <i className='far fa-clock'></i>7 Days
-                  </li>
-                  <li>
-                    <i className='far fa-user-friends'></i>65+
-                  </li>
-                  {/* <li className='money show'>$2000</li> */}
-                </ul>
-              </div>
-            </div>
-          </Col>
-          <Col className='places-card' xs={12} md={4}>
-            <Card>
-              <Card.Img
-                variant='top'
-                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813063/lynda-hinton-qUb4_r8Macg-unsplash_xwktky.jpg'
-              />
-            </Card>
-            <div className='visited'>
-              <div className='card'>
-                <span className='location'>
-                  <i className='fas fa-map-marker-alt'></i> Abuja, Nigeria
-                </span>
-                <h5>Wuse II Abuja, Nigeria</h5>
-                <div className='review'>
-                  <i className='far fa-smile'></i>
-                  <span>9</span>
-                  <span>Superb</span>
-                </div>
-                <p className='hide'>
-                  A wonderful little cottage right on the seashore - perfect for
-                  exploring.
-                </p>
-                <hr />
-                <ul className='list'>
-                  <li>
-                    <i className='far fa-clock'></i>7 Days
-                  </li>
-                  <li>
-                    <i className='far fa-user-friends'></i>65+
-                  </li>
-                  {/* <li className='money'>$2000</li> */}
-                </ul>
-              </div>
-            </div>
-            <div className='visited1 hide'>
-              <div className='card show'>
-                <span className='location show'>
-                  <i className='fas fa-map-marker-alt'></i> Abuja, Nigeria
-                </span>
-                <h5 className='show'>Wuse II Abuja, Nigeria</h5>
-                <div className='review show'>
-                  <i className='far fa-smile show'></i>
-                  <span className='show'>9</span>
-                  <span className='show'>Superb</span>
-                </div>
-                <p className='show'>
-                  A wonderful little cottage right on the seashore - perfect for
-                  exploring.
-                </p>
-                <hr />
-                <ul className='list show'>
-                  <li>
-                    <i className='far fa-clock'></i>7 Days
-                  </li>
-                  <li>
-                    <i className='far fa-user-friends'></i>65+
-                  </li>
-                  {/* <li className='money show'>$2000</li> */}
-                </ul>
-              </div>
-            </div>
-          </Col>
-          <Col className='places-card' xs={12} md={4}>
-            <Card>
-              <Card.Img
-                variant='top'
-                src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1605813472/fas-khan-fG_6H0URdos-unsplash_ykkp3y.jpg'
-              />
-            </Card>
-            <div className='visited'>
-              <div className='card'>
-                <span className='location'>
-                  <i className='fas fa-map-marker-alt'></i> Cross-River, Nigeria
-                </span>
-                <h5>Cross-River, Nigeria</h5>
-                <div className='review'>
-                  <i className='far fa-smile'></i>
-                  <span>9</span>
-                  <span>Superb</span>
-                </div>
-                <p className='hide'>
-                  A wonderful little cottage right on the seashore - perfect for
-                  exploring.
-                </p>
-                <hr />
-                <ul className='list'>
-                  <li>
-                    <i className='far fa-clock'></i>7 Days
-                  </li>
-                  <li>
-                    <i className='far fa-user-friends'></i>65+
-                  </li>
-                  {/* <li className='money'>$2000</li> */}
-                </ul>
-              </div>
-            </div>
-            <div className='visited1 hide'>
-              <div className='card show'>
-                <span className='location show'>
-                  <i className='fas fa-map-marker-alt'></i> Cross-River, Nigeria
-                </span>
-                <h5 className='show'>Cross-River, Nigeria</h5>
-                <div className='review show'>
-                  <i className='far fa-smile show'></i>
-                  <span className='show'>9</span>
-                  <span className='show'>Superb</span>
-                </div>
-                <p className='show'>
-                  A wonderful little cottage right on the seashore - perfect for
-                  exploring.
-                </p>
-                <hr />
-                <ul className='list show'>
-                  <li>
-                    <i className='far fa-clock'></i>7 Days
-                  </li>
-                  <li>
-                    <i className='far fa-user-friends'></i>65+
-                  </li>
-                  {/* <li className='money show'>$2000</li> */}
-                </ul>
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      </section>
 
-      <Slider />
+      <section className='container choose-us'>
+        <div className='choose-us-title'>
+          <h1>Why Choose Us</h1>
+        </div>
 
-      <TestimonySlider />
+        <div className='choose-us-one'>
+          <div className='col-one'>
+            <div className='col-one-title text-right'>
+              <h1>01</h1>
+            </div>
+            <div className='col-one-body'>
+              <h5>
+                <hr className='line' /> DIVERSE DESTINATION
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                deleniti voluptatem consequuntur suscipit nulla neque dolores
+                quo natus deserunt officiis.
+              </p>
+            </div>
+          </div>
+          <div className='col-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610143034/3_n0mmj2.png'
+              alt='img'
+            />
+          </div>
+        </div>
 
-      {/* <Container className='testimony text-center'>
-        <h2 className='text-uppercase'>What they say about us ...</h2>
-        <Row>
-          <Col xs={12} md={4} className='my-3'>
-            <div className='testimonial'>
-              <div className='name my-2'>Tosan</div>
-              <div className='stars'>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-              </div>
-              <p>Easily get all your previous bookings when logged in.</p>
+        <div className='choose-us-one'>
+          <div className='col-two-right'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/2_hy5zvu.png'
+              alt='img'
+            />
+          </div>
+          <div className='col-one-right'>
+            <div className='col-one-title text-left'>
+              <h1>02</h1>
             </div>
-          </Col>
-          <Col xs={12} md={4} className='my-3'>
-            <div className='testimonial'>
-              <div className='name my-2'>John </div>
-              <div className='stars'>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-              </div>
-              <p>Got my desired sitting position of my choice</p>
+            <div className='col-one-body'>
+              <h5>
+                <hr className='line' /> VALUE FOR MONEY
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                deleniti voluptatem consequuntur suscipit nulla neque dolores
+                quo natus deserunt officiis.
+              </p>
             </div>
-          </Col>
-          <Col xs={12} md={4} className='my-3'>
-            <div className='testimonial'>
-              <div className='name my-2'>Funmi</div>
-              <div className='stars'>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-                <i className='fas fa-star'></i>
-              </div>
-              <p>Smooth payment process integration paystack</p>
+          </div>
+        </div>
+
+        <div className='choose-us-one'>
+          <div className='col-one'>
+            <div className='col-one-title text-right'>
+              <h1>03</h1>
             </div>
-          </Col>
-        </Row>
-      </Container> */}
+            <div className='col-one-body'>
+              <h5>
+                <hr className='line' /> TRAVEL COMFORT
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                deleniti voluptatem consequuntur suscipit nulla neque dolores
+                quo natus deserunt officiis.
+              </p>
+            </div>
+          </div>
+          <div className='col-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/01_p6uyju.png'
+              alt='img'
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className='container desc'>
+        <div className='fre-des'>
+          <h1>Frequent Destinations</h1>
+        </div>
+
+        <div className='destinations'>
+          <div className='des-one'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_18_f7vcx5.png'
+              alt='img'
+            />
+            <div className='location'>
+              {/* <i class="fal fa-map-marker-alt"></i> */}
+              <h5>Lagos, Niheria</h5>
+            </div>
+          </div>
+          <div className='des-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_23_ixptic.png'
+              alt='img'
+            />
+            <div className='location'>
+              {/* <i class="fal fa-map-marker-alt"></i> */}
+              <h5>Abuja, Niheria</h5>
+            </div>
+          </div>
+          <div className='des-three'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_24_xefxpj.png'
+              alt='img'
+            />
+            <div className='location'>
+              {/* <i class="fal fa-map-marker-alt"></i> */}
+              <h5>Kadunna, Niheria</h5>
+            </div>
+          </div>
+          <div className='des-four'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_25_suss0w.png'
+              alt='img'
+            />
+            <div className='location'>
+              {/* <i class="fal fa-map-marker-alt"></i> */}
+              <h5>Ibadan, Niheria</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='container partners'>
+        <div className='partners-title'>
+          <h1>Our Partners</h1>
+        </div>
+
+        <div className='partners-container'>
+          <div className='partner'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/Vector_t5hghd.png'
+              alt='img'
+            />
+          </div>
+          <div className='partner-three'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/Vector_1_xrsjeu.png'
+              alt='img'
+            />
+          </div>
+          <div className='partner-two'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/svgg_1_lcujgm.png'
+              alt='img'
+            />
+          </div>
+          <div className='partner-one'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610232364/svgg_d6n4hm.png'
+              alt='img'
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className='container testimonies'>
+        <div className='testimonies-title'>
+          <h1>
+            We Are Helping People <br /> Travel Smarter{" "}
+          </h1>
+          <p>Testimonies of satisfied clients</p>
+        </div>
+
+        <div className='testimonies-container'>
+          <div className='testimony'>
+            <p>
+            “Travel with benefits has a smooth experience, I could easily book a trip for my preferred location”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240406/Rectangle_679_nfqgjf.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Tosan Abayomi</p>
+                <span>Photographer</span>
+              </div>
+            </div>
+          </div>
+          <div className='testimony'>
+            <p>
+            “Fast and smooth booking process and I got the best transport company service”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240943/Rectangle_679_1_k7yv7n.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Juliet Uzochukwu</p>
+                <span>Journalist</span>
+              </div>
+            </div>
+          </div>
+          <div className='testimony'>
+            <p>
+            “I really had a wonderful experience using travel with benefits”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240943/Rectangle_679_3_krg5zi.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Kofi Adams</p>
+                <span>Software engineer</span>
+              </div>
+            </div>
+          </div>
+          <div className='testimony'>
+            <p>
+            “Easily booking process and wonderful experience”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240943/Rectangle_679_2_wkwruy.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Vivian Donga</p>
+                <span>Program Co-ordinator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='container partners'>
+        {/* <div className='partners-title'>
+          <h1>Our Partners</h1>
+        </div> */}
+
+        <div className='partners-container'></div>
+      </section>
     </div>
   );
 }

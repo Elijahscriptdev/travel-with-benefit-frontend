@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Col, Form } from "react-bootstrap";
 import "./Booking.css";
 import RenderForm from "./RenderForm";
+import { Col, Container, Jumbotron, Form } from "react-bootstrap";
 
 const BusListings = () => {
   const [info, setInfo] = useState([]);
@@ -57,6 +57,13 @@ const BusListings = () => {
 
   return (
     <div className='background pt-1'>
+      <Jumbotron fluid className='jumbotron text-white'>
+        <Container className='text-center mt-5'>
+          <h3>
+            View all search result
+          </h3>
+        </Container>
+      </Jumbotron>
       <div className='container '>
         <h1 className='text-center my'>UPDATE SEARCH</h1>
         <Form className='form mb-5' onSubmit={(e) => handleSubmit(e)}>
