@@ -90,8 +90,32 @@ function Homepage() {
           </div>
         </div>
 
-        <div className='choose-us-one'>
-          <div className='col-one'>
+        <div className='hide choose-us-one '>
+          <div className='col-one mb-5'>
+            <div className='col-one-title text-right'>
+              <h1>02</h1>
+            </div>
+            <div className='col-one-body'>
+              <h5>
+                <hr className='line' /> VALUE FOR MONEY
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                deleniti voluptatem consequuntur suscipit nulla neque dolores
+                quo natus deserunt officiis.
+              </p>
+            </div>
+          </div>
+          <div className='col-two mb-5'>
+            <img
+              src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/2_hy5zvu.png'
+              alt='img'
+            />
+          </div>
+        </div>
+
+        <div className='choose-us-one my-5'>
+          <div className='col-one mt-5'>
             <div className='col-one-title text-right'>
               <h1>03</h1>
             </div>
@@ -106,7 +130,7 @@ function Homepage() {
               </p>
             </div>
           </div>
-          <div className='col-two'>
+          <div className='col-two mb-5'>
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/01_p6uyju.png'
               alt='img'
@@ -208,7 +232,8 @@ function Homepage() {
         <div className='testimonies-container'>
           <div className='testimony'>
             <p>
-            “Travel with benefits has a smooth experience, I could easily book a trip for my preferred location”
+              “Travel with benefits has a smooth experience, I could easily book
+              a trip for my preferred location”
             </p>
             <div className='testimony-body'>
               <div className='testimony-body-img'>
@@ -225,7 +250,8 @@ function Homepage() {
           </div>
           <div className='testimony'>
             <p>
-            “Fast and smooth booking process and I got the best transport company service”
+              “Fast and smooth booking process and I got the best transport
+              company service”
             </p>
             <div className='testimony-body'>
               <div className='testimony-body-img'>
@@ -242,7 +268,7 @@ function Homepage() {
           </div>
           <div className='testimony'>
             <p>
-            “I really had a wonderful experience using travel with benefits”
+              “I really had a wonderful experience using travel with benefits”
             </p>
             <div className='testimony-body'>
               <div className='testimony-body-img'>
@@ -258,9 +284,7 @@ function Homepage() {
             </div>
           </div>
           <div className='testimony'>
-            <p>
-            “Easily booking process and wonderful experience”
-            </p>
+            <p>“Easily booking process and wonderful experience”</p>
             <div className='testimony-body'>
               <div className='testimony-body-img'>
                 <img
