@@ -57,6 +57,16 @@ margin-bottom: 20px;
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 576px) {
+  .nav-menu-container {
+    display: none;
+  }
+
+  .navbar-container {
+    padding: 0 1.4rem;
+  }
+}
+
 /* .navbar-logo {
   color: #dd4f05;
   justify-self: start;
