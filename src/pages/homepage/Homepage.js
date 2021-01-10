@@ -219,7 +219,7 @@ function Homepage() {
               </div>
               <div className='testimony-body-name'>
                 <p>Tosan Abayomi</p>
-                <span>Professional Photographer</span>
+                <span>Photographer</span>
               </div>
             </div>
           </div>
