@@ -149,40 +149,44 @@ function Homepage() {
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_18_f7vcx5.png'
               alt='img'
+              className='image'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
-              <h5>Lagos, Niheria</h5>
+              <h5 className='text'>Lagos, Nigeria</h5>
             </div>
           </div>
           <div className='des-two'>
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_23_ixptic.png'
               alt='img'
+              className='image'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
-              <h5>Abuja, Niheria</h5>
+              <h5 className='text'>Abuja, Nigeria</h5>
             </div>
           </div>
           <div className='des-three'>
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_24_xefxpj.png'
               alt='img'
+              className='image'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
-              <h5>Kadunna, Niheria</h5>
+              <h5 className='text'>Kaduna, Nigeria</h5>
             </div>
           </div>
           <div className='des-four'>
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_25_suss0w.png'
               alt='img'
+              className='image'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
-              <h5>Ibadan, Niheria</h5>
+              <h5 className='text'>Ibadan, Nigeria</h5>
             </div>
           </div>
         </div>

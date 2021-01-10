@@ -7,11 +7,24 @@
   /* color: #ff7f00; */
 }
 
-.card-color {
-  background: #f1f1f1 !important;
-  border: none;
+.jumbotron h3 {
+  font-family: Cardo;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
-.service {
-  margin: 60px auto 80px !important;
+@media screen and (max-width: 576px) {
+  .jumbotron h3 {
+    font-family: Cardo;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
 }
