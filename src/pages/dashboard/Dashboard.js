@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Dashboard.css";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 // import PropTypes from "prop-types";
 // import { connect } from "react-redux";
 // import { getProfile } from "../../redux/actions/profile";
@@ -43,7 +45,13 @@ const Dashboard = () => {
 
   return (
     <div className='contain'>
-      <h1 className='text-right'>Welcome {data.first_name}!!!!</h1>
+      <Jumbotron fluid className='jumbotron text-white'>
+        <Container className='text-center mt-5'>
+          <h3>
+          Welcome {data.first_name}!!!!
+          </h3>
+        </Container>
+      </Jumbotron>
       
       <form className='form' onSubmit={(e) => onSubmit(e)}>
         <div className='form-group'>

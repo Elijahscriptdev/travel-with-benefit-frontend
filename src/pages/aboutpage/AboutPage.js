@@ -7,7 +7,7 @@ function AboutPage() {
   return (
     <>
       <Jumbotron fluid className='jumbotron text-white'>
-        <Container className='text-center'>
+        <Container className='text-center mt-5'>
           <h3>
             <Link to='/' className='text-white'>
               Home/
