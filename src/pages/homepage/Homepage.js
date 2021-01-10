@@ -196,6 +196,94 @@ function Homepage() {
           </div>
         </div>
       </section>
+
+      <section className='container testimonies'>
+        <div className='testimonies-title'>
+          <h1>
+            We Are Helping People <br /> Travel Smarter{" "}
+          </h1>
+          <p>Testimonies of satisfied clients</p>
+        </div>
+
+        <div className='testimonies-container'>
+          <div className='testimony'>
+            <p>
+            “Travel with benefits has a smooth experience, I could easily book a trip for my preferred location”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240406/Rectangle_679_nfqgjf.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Tosan Abayomi</p>
+                <span>Professional Photographer</span>
+              </div>
+            </div>
+          </div>
+          <div className='testimony'>
+            <p>
+            “Fast and smooth booking process and I got the best transport company service”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240943/Rectangle_679_1_k7yv7n.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Juliet Uzochukwu</p>
+                <span>Journalist</span>
+              </div>
+            </div>
+          </div>
+          <div className='testimony'>
+            <p>
+            “I really had a wonderful experience using travel with benefits”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240943/Rectangle_679_3_krg5zi.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Kofi Adams</p>
+                <span>Software engineer</span>
+              </div>
+            </div>
+          </div>
+          <div className='testimony'>
+            <p>
+            “Easily booking process and wonderful experience”
+            </p>
+            <div className='testimony-body'>
+              <div className='testimony-body-img'>
+                <img
+                  src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610240943/Rectangle_679_2_wkwruy.png'
+                  alt='img'
+                />
+              </div>
+              <div className='testimony-body-name'>
+                <p>Vivian Donga</p>
+                <span>Program Co-ordinator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='container partners'>
+        {/* <div className='partners-title'>
+          <h1>Our Partners</h1>
+        </div> */}
+
+        <div className='partners-container'></div>
+      </section>
     </div>
   );
 }

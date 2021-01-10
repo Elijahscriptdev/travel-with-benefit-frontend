@@ -210,6 +210,89 @@
   margin-top: -10px;
 }
 
+.testimonies {
+  padding: 100px 0px 0px;
+}
+
+.testimonies-title h1 {
+  font-family: Cardo;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.testimonies-title p {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #a0a3bd;
+  margin-bottom: 40px;
+}
+
+.testimonies .testimonies-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  margin: 0 auto;
+}
+
+.testimony {
+  padding: 20px;
+  box-shadow: 2px 2px 6px #A0A3BD;
+}
+
+.testimony:hover {
+  padding: 20px;
+  box-shadow: 5px 5px 15px #A0A3BD;
+}
+
+.testimony p {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #a0a3bd;
+}
+
+.testimony-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 30px;
+  padding: 20px 0;
+}
+
+.testimony-body-name p {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #d43c14;
+}
+
+.testimony-body-name span {
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a0a3bd;
+}
 /* .welcome {
   margin: 60px auto !important;
 }
