@@ -54,12 +54,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       </Jumbotron>
       <div className='form-auth'>
         <form className='form' onSubmit={(e) => onSubmit(e)}>
-          <p className='lead'>
-            <i className='fas fa-user'></i> Create Your Account
-          </p>
           <div className='form-group'>
             <input
-              className='p-3'
+              className='p'
               type='text'
               value={first_name}
               placeholder='First Name'
@@ -70,7 +67,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </div>
           <div className='form-group'>
             <input
-              className='p-3'
+              className='p'
               type='text'
               value={last_name}
               placeholder='Last Name'

@@ -162,7 +162,7 @@
 
 @media screen and (max-width: 576px) {
   .hero-container {
-    height: 75vh;
+    height: 80vh;
   }
 
   .hero-highlight {

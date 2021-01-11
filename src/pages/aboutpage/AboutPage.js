@@ -17,7 +17,7 @@ function AboutPage() {
         </Container>
       </Jumbotron>
 
-      <section className='container intro'>
+      <section className='container intro about'>
         <div className='intro-one'>
           <h1 className='intron-one-heading'>Travel With Benefits</h1>
           <p>
@@ -53,7 +53,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className='container partners'>
+      <section className='container partners about-partners' id="partner">
         <div className='partners-title'>
           <h1>Our Partners</h1>
         </div>
