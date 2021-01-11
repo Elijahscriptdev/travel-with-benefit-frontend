@@ -45,16 +45,9 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
           </h3>
         </Container>
       </Jumbotron>
-      {/* <div className='alert alert-danger'>Invalid credentials</div> */}
-      {/* <h1 className='large text-primary'>Sign In</h1>
-      <p className='lead'>
-        <i className='fas fa-user'></i> Sign into Your Account
-      </p> */}
+
       <div className='form-auth'>
         <form className='form py-5' onSubmit={(e) => onSubmit(e)}>
-          <p className='lead'>
-            <i className='fas fa-user'></i> Sign into Your Account
-          </p>
           <div className='form-group'>
             <input
               type='email'

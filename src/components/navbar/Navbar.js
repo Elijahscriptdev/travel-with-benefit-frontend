@@ -87,11 +87,11 @@ function Navbar({ auth: { isAuthenticated, loading, admin }, logout }) {
           About
         </Link>
       </li>
-      <li className='nav-items'>
+      {/* <li className='nav-items'>
         <a href='/#partner' className='nav-links' onClick={closeMobileMenu}>
           Our Partners
         </a>
-      </li>
+      </li> */}
       <li className='nav-items'>
         <Link
           to='/bus/listings'

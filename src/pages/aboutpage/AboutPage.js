@@ -53,7 +53,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className='container partners about-partners'>
+      <section className='container partners about-partners' id="partner">
         <div className='partners-title'>
           <h1>Our Partners</h1>
         </div>

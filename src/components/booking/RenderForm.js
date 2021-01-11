@@ -106,7 +106,7 @@ const RenderForm = ({ data, ...rest }) => {
             </div>
             <div className='box m-1'>
               <label>{data.price}</label>
-              <button type='submit' className='px-4 btn-proced text-white'>
+              <button type='submit' className=' btn-proceeds text-white'>
                 Proceed
               </button>
             </div>

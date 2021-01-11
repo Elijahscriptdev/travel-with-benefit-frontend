@@ -64,7 +64,7 @@ const BusListings = () => {
           </h3>
         </Container>
       </Jumbotron>
-      <div className='container '>
+      <div className='container update'>
         <h1 className='text-center my'>UPDATE SEARCH</h1>
         <Form className='form mb-5' onSubmit={(e) => handleSubmit(e)}>
           <p className=''>Search for available buses</p>
@@ -95,7 +95,7 @@ const BusListings = () => {
               />
             </Col>
             <Col xs={12} md={3} className='text-center'>
-              <button className='btn btn-form text-white'>PROCEED</button>
+              <button className='btn-proceed text-white'>PROCEED</button>
             </Col>
           </Form.Row>
         </Form>

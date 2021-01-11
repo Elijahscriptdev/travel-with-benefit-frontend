@@ -4,6 +4,14 @@
   padding: 50px 0;
 }
 
+.form-auth .form-group input {
+  padding: 15px;
+}
+
+.form-auth input {
+  padding: 15px!important;
+}
+
 .btns {
   width: 100%;
   color: #fff;
@@ -23,3 +31,9 @@
     padding: 25px 0;
   }
 }
+
+/* input[type="text" i] {
+  padding: 15px;
+  width: 100%;
+  border: none!important;
+} */
