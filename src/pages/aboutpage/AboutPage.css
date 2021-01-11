@@ -27,4 +27,13 @@
     letter-spacing: 0px;
     text-align: left;
   }
+
+  .about .intro-img {
+    margin-top: 120px;
+    margin-bottom: 0;
+  }
+
+  .about-partners {
+    margin-top: -120px;
+  }
 }
