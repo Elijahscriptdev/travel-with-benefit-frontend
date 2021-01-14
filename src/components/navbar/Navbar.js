@@ -116,7 +116,7 @@ function Navbar({ auth: { isAuthenticated, loading, admin }, logout }) {
   );
 
   return (
-    <div className="nav-bar">
+    <div className='nav-bar'>
       <nav className='navbar'>
         <div className='navbar-container'>
           <div className='navbar-logo'>
@@ -136,13 +136,12 @@ function Navbar({ auth: { isAuthenticated, loading, admin }, logout }) {
                 />
               </svg>
             </Link>
-
-            {/* <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div> */}
           </div>
           <div className='nav-menu-container'>
             {!loading && isAuthenticated ? authLinks : guestLinks}
+          </div>
+          <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
         </div>
       </nav>
