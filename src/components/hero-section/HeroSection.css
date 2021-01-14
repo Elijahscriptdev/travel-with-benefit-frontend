@@ -101,9 +101,9 @@
   } */
 } 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .hero-container {
-    height: 65vh;
+    height: 90vh;
   }
 
   .hero-highlight {
@@ -152,12 +152,14 @@
 
   .form-body {
     padding: 20px;
-    height: 180px;
+    height: 300px;
     max-width: 900px;
     background: rgba(255, 255, 255, 0.164);
     backdrop-filter: blur(3px);
     border-radius: 5px;
   }
+
+  
 }
 
 @media screen and (max-width: 576px) {
