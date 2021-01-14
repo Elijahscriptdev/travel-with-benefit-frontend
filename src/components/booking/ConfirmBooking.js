@@ -1,6 +1,8 @@
 import React from "react";
 import { PaystackButton } from "react-paystack";
 import { useHistory } from "react-router-dom";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
@@ -79,140 +81,146 @@ const ConfirmBooking = () => {
   };
 
   return (
-    <div className='container'>
-      <h1>Confirm Your Booking</h1>
+    <>
+      <Jumbotron fluid className='jumbotron text-white pt-5'>
+        <Container className='text-center'>
+          <h3>Pay Now</h3>
+        </Container>
+      </Jumbotron>
+      <div className='container'>
 
-      <form className='my-4' onSubmit={(e) => onSubmit(e)}>
-        <div className='form-row'>
-          <div className='form-group col-md-4'>
-            <label>First Name</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.first_name}
-              name='first_name'
-              //   onChange={(e) => onChange(e)}
-            />
+        <form className='my-4' onSubmit={(e) => onSubmit(e)}>
+          <div className='form-row'>
+            <div className='form-group col-md-4'>
+              <label>First Name</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.first_name}
+                name='first_name'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Last Name</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.last_name}
+                name='last_name'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Email</label>
+              <input
+                type='email'
+                className='form-control'
+                value={data.email}
+                name='email'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
           </div>
-          <div className='form-group col-md-4'>
-            <label>Last Name</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.last_name}
-              name='last_name'
-              //   onChange={(e) => onChange(e)}
-            />
+          <div className='form-row'>
+            <div className='form-group col-md-4'>
+              <label>Departure</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.departure}
+                name='departure'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Destination</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.destination}
+                name='destination'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Bus</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.bus_type}
+                name='bus_type'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
           </div>
-          <div className='form-group col-md-4'>
-            <label>Email</label>
-            <input
-              type='email'
-              className='form-control'
-              value={data.email}
-              name='email'
-              //   onChange={(e) => onChange(e)}
-            />
+          <div className='form-row'>
+            <div className='form-group col-md-4'>
+              <label>Company</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.bus_company}
+                name='bus_company'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Time</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.travel_time}
+                name='travel_time'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Date</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.travel_date}
+                name='travel_date'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
           </div>
-        </div>
-        <div className='form-row'>
-          <div className='form-group col-md-4'>
-            <label>Departure</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.departure}
-              name='departure'
-              //   onChange={(e) => onChange(e)}
-            />
+          <div className='form-row'>
+            <div className='form-group col-md-4'>
+              <label>Seats</label>
+              <input
+                className='form-control'
+                value={seats}
+                name='seats'
+                //   onChange={(e) => onChange(e)}
+              ></input>
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Price</label>
+              <input
+                type='text'
+                className='form-control'
+                value={data.price}
+                name='unit_price'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='form-group col-md-4'>
+              <label>Total Price</label>
+              <input
+                type='text'
+                className='form-control'
+                value={seats * price}
+                name='total_price'
+                //   onChange={(e) => onChange(e)}
+              />
+            </div>
           </div>
-          <div className='form-group col-md-4'>
-            <label>Destination</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.destination}
-              name='destination'
-              //   onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className='form-group col-md-4'>
-            <label>Bus</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.bus_type}
-              name='bus_type'
-              //   onChange={(e) => onChange(e)}
-            />
-          </div>
-        </div>
-        <div className='form-row'>
-          <div className='form-group col-md-4'>
-            <label>Company</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.bus_company}
-              name='bus_company'
-              //   onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className='form-group col-md-4'>
-            <label>Time</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.travel_time}
-              name='travel_time'
-              //   onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className='form-group col-md-4'>
-            <label>Date</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.travel_date}
-              name='travel_date'
-              //   onChange={(e) => onChange(e)}
-            />
-          </div>
-        </div>
-        <div className='form-row'>
-          <div className='form-group col-md-4'>
-            <label>Seats</label>
-            <input
-              className='form-control'
-              value={seats}
-              name='seats'
-              //   onChange={(e) => onChange(e)}
-            ></input>
-          </div>
-          <div className='form-group col-md-4'>
-            <label>Price</label>
-            <input
-              type='text'
-              className='form-control'
-              value={data.price}
-              name='unit_price'
-              //   onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className='form-group col-md-4'>
-            <label>Total Price</label>
-            <input
-              type='text'
-              className='form-control'
-              value={seats * price}
-              name='total_price'
-              //   onChange={(e) => onChange(e)}
-            />
-          </div>
-        </div>
-        <PaystackButton {...componentProps} />
-      </form>
-    </div>
+          <PaystackButton {...componentProps} className="btn btn-primary" />
+        </form>
+      </div>
+    </>
   );
 };
 

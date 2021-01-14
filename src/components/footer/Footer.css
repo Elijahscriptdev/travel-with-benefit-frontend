@@ -1,5 +1,108 @@
-.footer-container {
-  /* background-color: #242424; */
+.footer {
+  background: #fbfbfd;
+}
+
+.footer .footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-column-gap: 100px;
+  padding: 50px 0;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: justified;
+
+}
+
+.footer-items a,
+.footer-items .social-icons {
+  margin-top: 7px;
+  text-decoration: none;
+  color: #12182c;
+  font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: justified;
+
+}
+
+.footer-items a:hover {
+  color: #d43c14;
+  font-weight: bold;
+}
+
+.footer-items-one p {
+  margin-top: 20px;
+  font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: justified;
+
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #d43c14;
+}
+
+.social-icons a {
+  color: #d43c14;
+}
+
+.social-icons a:hover {
+  color: #d43c14;
+  border: 1px solid #d43c14;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    background: #fbfbfd;
+    padding: 20px;
+  }
+  
+  .footer .footer-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    background: #fbfbfd;
+    padding: 20px;
+  }
+  
+  .footer .footer-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 50px 0;
+  }
+}
+/* .footer-container {
   background: #2c2c2c;
   padding: 4rem 0 2rem 0;
   display: flex;
@@ -103,7 +206,6 @@
   color: #b1b1b1;
 }
 
-/* Social Icons */
 .social-icon-link {
   color: #fff;
   font-size: 24px;
@@ -192,4 +294,4 @@
 
 .btn-color:hover {
   background: #b94202;
-}
+} */

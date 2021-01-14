@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 import { setAlert } from "../../redux/actions/alert";
 import { login } from "../../redux/actions/auth";
 import "./auth.css";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
+// import { Link } from "react-router-dom";
 
 const Login = ({ login, isAuthenticated, setAlert }) => {
   const [formData, setFormData] = useState({
@@ -36,16 +38,16 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
 
   return (
     <div className='booking-info py-3'>
-      {/* <div className='alert alert-danger'>Invalid credentials</div> */}
-      {/* <h1 className='large text-primary'>Sign In</h1>
-      <p className='lead'>
-        <i className='fas fa-user'></i> Sign into Your Account
-      </p> */}
+      <Jumbotron fluid className='jumbotron text-white'>
+        <Container className='text-center mt-5'>
+          <h3>
+            Sign into Your Account <i className='fas fa-user'></i>
+          </h3>
+        </Container>
+      </Jumbotron>
+
       <div className='form-auth'>
         <form className='form py-5' onSubmit={(e) => onSubmit(e)}>
-          <p className='lead'>
-            <i className='fas fa-user'></i> Sign into Your Account
-          </p>
           <div className='form-group'>
             <input
               type='email'
@@ -66,11 +68,11 @@ const Login = ({ login, isAuthenticated, setAlert }) => {
             />
           </div>
           <div className='text-center'>
-          <input type='submit' className='btn btns'  value='Login' />
+            <input type='submit' className='btn btns' value='Login' />
           </div>
           <p className='mt-2'>
-        Already have an account? <Link to='/register'>Sign Up</Link>
-      </p>
+            Already have an account? <Link to='/register'>Sign Up</Link>
+          </p>
         </form>
       </div>
     </div>

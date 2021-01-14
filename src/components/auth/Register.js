@@ -5,6 +5,7 @@ import { setAlert } from "../../redux/actions/alert";
 import { register } from "../../redux/actions/auth";
 import PropTypes from "prop-types";
 import "./auth.css";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -44,14 +45,18 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <div className='booking-info'>
+      <Jumbotron fluid className='jumbotron text-white'>
+        <Container className='text-center mt-5'>
+          <h3>
+            Create Your Account <i className='fas fa-user'></i>
+          </h3>
+        </Container>
+      </Jumbotron>
       <div className='form-auth'>
         <form className='form' onSubmit={(e) => onSubmit(e)}>
-          <p className='lead'>
-            <i className='fas fa-user'></i> Create Your Account
-          </p>
           <div className='form-group'>
             <input
-              className='p-3'
+              className='p'
               type='text'
               value={first_name}
               placeholder='First Name'
@@ -62,7 +67,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </div>
           <div className='form-group'>
             <input
-              className='p-3'
+              className='p'
               type='text'
               value={last_name}
               placeholder='Last Name'
