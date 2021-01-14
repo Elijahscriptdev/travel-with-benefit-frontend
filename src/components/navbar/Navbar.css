@@ -84,14 +84,14 @@
   }
 
   .nav-menu-container {
-    background-color: #d43c14;
+    /* background-color: #d43c14; */
     width: 150px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -10000%;
     transition: 850ms;
   }
 
