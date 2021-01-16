@@ -73,6 +73,21 @@ text-align: justified;
   padding: 5px;
 }
 
+@media screen and (max-width: 765px) {
+  .footer {
+    background: #fbfbfd;
+    padding: 20px;
+  }
+  
+  .footer .footer-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 50px 0;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .footer {
     background: #fbfbfd;

@@ -91,15 +91,11 @@
   background: #d43c14;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 765px) {
   /* .hero-container {
     height: 90vh;
-  }
-
-  .hero-container > h1 {
-    font-size: 70px;
   } */
-} 
+}
 
 @media screen and (max-width: 680px) {
   .hero-container {
