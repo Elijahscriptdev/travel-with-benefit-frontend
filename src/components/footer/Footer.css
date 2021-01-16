@@ -14,13 +14,12 @@
   flex-direction: column;
   margin-top: 25px;
   font-family: DM Sans;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: 0em;
-text-align: justified;
-
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: justified;
 }
 
 .footer-items a,
@@ -29,13 +28,12 @@ text-align: justified;
   text-decoration: none;
   color: #12182c;
   font-family: DM Sans;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: 0em;
-text-align: justified;
-
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: justified;
 }
 
 .footer-items a:hover {
@@ -46,13 +44,12 @@ text-align: justified;
 .footer-items-one p {
   margin-top: 20px;
   font-family: DM Sans;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: 0em;
-text-align: justified;
-
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: justified;
 }
 
 .social-icons {
@@ -78,7 +75,7 @@ text-align: justified;
     background: #fbfbfd;
     padding: 20px;
   }
-  
+
   .footer .footer-container {
     display: grid;
     grid-template-columns: auto;
@@ -93,7 +90,7 @@ text-align: justified;
     background: #fbfbfd;
     padding: 20px;
   }
-  
+
   .footer .footer-container {
     display: grid;
     grid-template-columns: auto;
@@ -108,7 +105,7 @@ text-align: justified;
     background: #fbfbfd;
     padding: 20px;
   }
-  
+
   .footer .footer-container {
     display: grid;
     grid-template-columns: auto;
