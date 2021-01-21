@@ -622,11 +622,16 @@
 
   .choose-us-one .col-two {
     width: 100%;
-    height: 250px;
+    height: 100%!important;
   }
 
   .choose-us-one .col-two-right {
     display: none;
+  }
+
+  .choose-us-one img {
+    width: 100%;
+    height: 100%!important;
   }
 
   .col-one-body h5 {
@@ -1286,7 +1291,7 @@
 
   .choose-us-one img {
     width: 100%;
-    height: 350px;
+    height: 50%;
   }
 
   /* destinations */

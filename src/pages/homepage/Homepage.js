@@ -71,6 +71,7 @@ function Homepage() {
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/2_hy5zvu.png'
               alt='img'
+              className="img-fluid"
             />
           </div>
           <div className='col-one-right'>
@@ -149,7 +150,7 @@ function Homepage() {
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_18_f7vcx5.png'
               alt='img'
-              className='image'
+              className='image img-fluid'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
@@ -160,7 +161,7 @@ function Homepage() {
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_23_ixptic.png'
               alt='img'
-              className='image'
+              className='image img-fluid'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
@@ -171,7 +172,7 @@ function Homepage() {
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_24_xefxpj.png'
               alt='img'
-              className='image'
+              className='image img-fluid'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
@@ -182,7 +183,7 @@ function Homepage() {
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610158031/Rectangle_25_suss0w.png'
               alt='img'
-              className='image'
+              className='image img-fluid'
             />
             <div className='location'>
               {/* <i class="fal fa-map-marker-alt"></i> */}
