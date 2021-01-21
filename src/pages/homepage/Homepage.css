@@ -285,7 +285,9 @@
 
 .testimony {
   padding: 20px;
-  box-shadow: 2px 2px 6px #a0a3bd;
+  /* box-shadow: 2px 2px 6px #a0a3bd; */
+  /* box-shadow: 1px 1px 1px 1px #aaaaaa; */
+  box-shadow: 5px 10px 20px #dddee2 inset;
 }
 
 .testimony:hover {
@@ -500,7 +502,8 @@
 
   .testimony {
     padding: 20px;
-    box-shadow: 2px 2px 6px #a0a3bd;
+    /* box-shadow: 2px 2px 6px #a0a3bd; */
+    box-shadow: 5px 10px 20px #dddee2 inset;
   }
 
   .testimony:hover {
@@ -776,7 +779,7 @@
 
   .testimony {
     padding: 20px;
-    box-shadow: 2px 2px 6px #a0a3bd;
+    box-shadow: 5px 10px 20px #dddee2 inset;
   }
 
   .testimony:hover {
@@ -1087,7 +1090,7 @@
 
   .testimony {
     padding: 20px;
-    box-shadow: 2px 2px 6px #a0a3bd;
+    box-shadow: 5px 10px 20px #dddee2 inset;
   }
 
   .testimony:hover {
@@ -1399,7 +1402,7 @@
 
   .testimony {
     padding: 20px;
-    box-shadow: 2px 2px 6px #a0a3bd;
+    box-shadow: 5px 10px 20px #dddee2 inset;
   }
 
   .testimony:hover {
@@ -1445,6 +1448,10 @@
     letter-spacing: 0em;
     text-align: left;
     color: #a0a3bd;
+  }
+
+  .testimony-body-name {
+    text-align: left!important;
   }
 }
 
