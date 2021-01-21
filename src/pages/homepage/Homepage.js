@@ -92,7 +92,7 @@ function Homepage() {
         </div>
 
         <div className='hide choose-us-one '>
-          <div className='col-one mb-5'>
+          <div className='col-one'>
             <div className='col-one-title text-right'>
               <h1>02</h1>
             </div>
@@ -107,7 +107,7 @@ function Homepage() {
               </p>
             </div>
           </div>
-          <div className='col-two mb-5'>
+          <div className='col-two'>
             <img
               src='https://res.cloudinary.com/elijjaaahhhh/image/upload/v1610190075/2_hy5zvu.png'
               alt='img'
@@ -115,7 +115,7 @@ function Homepage() {
           </div>
         </div>
 
-        <div className='choose-us-one my-5'>
+        <div className='choose-us-one'>
           <div className='col-one mt-5'>
             <div className='col-one-title text-right'>
               <h1>03</h1>
